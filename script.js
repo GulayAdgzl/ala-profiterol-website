@@ -90,9 +90,13 @@ if (chocoDrip) {
     const slot = width / count;
 
     for (let i = 0; i < count; i++) {
-      const w = rand(9, 16);
-      const len = rand(mobile ? 16 : 20, mobile ? 34 : 48);
-      const dur = rand(7, 12);
+      // %30 kalın-yavaş-uzun damla, %70 ince-hızlı-kısa damla
+      const fat = Math.random() < 0.3;
+      const w = fat ? rand(16, 23) : rand(8, 13);
+      const len = fat
+        ? rand(mobile ? 28 : 38, mobile ? 40 : 58)
+        : rand(mobile ? 14 : 18, mobile ? 28 : 38);
+      const dur = fat ? rand(11, 16) : rand(6, 10);
 
       const drip = document.createElement("span");
       drip.className = "drip";
@@ -112,4 +116,64 @@ if (chocoDrip) {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(buildDrips, 200);
   });
+}
+
+// ---------------------------------------------------------
+// HİBRİT MOD: gerçek çikolata fotoğrafı kenarı + canlı düşen damlalar
+// choco-edge.png yoksa hiçbir şey yapmaz (gooey çikolata devam eder).
+// ---------------------------------------------------------
+const EDGE_SRC = "choco-edge.png";
+const EDGE_BASE_H = 120; // px — EDGE_TIPS bu yükseklikteki görsele göre ölçüldü
+// Damla uçları: [görsel genişliğine oranla x konumu, üstten y (px)]
+const EDGE_TIPS = [[0.155, 116], [0.277, 96.4], [0.499, 102], [0.721, 96.4], [0.843, 116]];
+
+if (chocoDrip) {
+  const rand2 = (min, max) => Math.random() * (max - min) + min;
+  const probe = new Image();
+
+  probe.onload = () => {
+    chocoDrip.classList.add("has-edge");
+
+    let lastKey = "";
+    const buildEdgeDrops = () => {
+      const width = chocoDrip.clientWidth;
+      const edgeH =
+        parseFloat(getComputedStyle(chocoDrip).getPropertyValue("--edge-h")) || EDGE_BASE_H;
+      const key = `${width}x${edgeH}`;
+      if (!width || key === lastKey) return;
+      lastKey = key;
+
+      const k = edgeH / EDGE_BASE_H;
+      const tileW = probe.naturalWidth * (edgeH / probe.naturalHeight);
+
+      chocoDrip.querySelectorAll(".tip-drop").forEach((el) => el.remove());
+
+      const tiles = Math.ceil(width / tileW);
+      for (let t = 0; t < tiles; t++) {
+        EDGE_TIPS.forEach(([f, y]) => {
+          const x = (t + f) * tileW;
+          if (x > width || Math.random() > 0.55) return;
+
+          const size = rand2(8, 13) * k;
+          const dur = rand2(6, 11);
+          const drop = document.createElement("span");
+          drop.className = "tip-drop";
+          drop.style.cssText =
+            `left:${x - size / 2}px;top:${y * k - size * 0.6}px;` +
+            `--s:${size}px;--dur:${dur}s;--delay:${-rand2(0, dur)}s`;
+          chocoDrip.appendChild(drop);
+        });
+      }
+    };
+
+    buildEdgeDrops();
+
+    let edgeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(edgeTimer);
+      edgeTimer = setTimeout(buildEdgeDrops, 200);
+    });
+  };
+
+  probe.src = EDGE_SRC;
 }
