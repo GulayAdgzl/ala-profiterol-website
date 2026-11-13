@@ -102,187 +102,131 @@
 }
 
 
+/* =========================================================
+   ANİMASYONLU ÇİKOLATA DAMLALARI
+   style.css'teki eski ".chocolate-drip" kurallarını
+   ("Gerçek çikolata SVG yüzeyi" bloğunu) silip bunu yapıştırın.
+   ========================================================= */
 
-/* =========================================
-   A'LA PROFITEROL — PREMIUM CHOCOLATE HEADER
-   STEP 01
-========================================= */
+.site-header { isolation: isolate; overflow: visible; }
 
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 30;
-    isolation: isolate;
-    overflow: visible;
-
-    background:
-        linear-gradient(
-            110deg,
-            rgba(255, 210, 160, .07),
-            transparent 35%,
-            rgba(0, 0, 0, .12)
-        ),
-        linear-gradient(
-            180deg,
-            #351307 0%,
-            #451907 55%,
-            #2b0c03 100%
-        );
-
-    box-shadow:
-        0 8px 24px rgba(45, 16, 5, .22),
-        0 2px 5px rgba(0, 0, 0, .12);
+.site-header > .chocolate-drip {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: calc(100% - 6px);
+  width: 100%;
+  height: 130px;
+  pointer-events: none;
+  /* gooey filtre damlaları birbirine/şeride yapıştırır, gölge de üstüne biner */
+  filter: url(#choco-goo) drop-shadow(0 5px 4px rgba(40, 12, 3, .35));
 }
 
-/* Logo ve navigasyon her zaman önde */
-.site-header > * {
-    position: relative;
-    z-index: 3;
+/* Üst çikolata şeridi (header ile aynı renk) */
+.choco-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 12px;
+  background: #2b0c03;
 }
 
-/* Çikolatanın parlak alt yüzeyi */
-.site-header::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-
-    left: 0;
-    right: 0;
-    bottom: -2px;
-
-    height: 4px;
-
-    background: linear-gradient(
-        90deg,
-        #54200b,
-        #a45b2b 18%,
-        #e5ad78 32%,
-        #6b3015 52%,
-        #c17a43 75%,
-        #351307 100%
-    );
-
-    opacity: .85;
-    pointer-events: none;
+/* Şeridin altındaki dalgalı, organik çikolata kabarcıkları */
+.blob {
+  position: absolute;
+  top: 6px;
+  background: linear-gradient(180deg, #2b0c03, #3a1406);
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  transform-origin: top;
+  animation: blob-ooze var(--bdur, 7s) ease-in-out var(--bdelay, 0s) infinite alternate;
 }
 
-/* Doğal erimiş çikolata damlaları */
-.site-header::after {
-    content: "";
-    position: absolute;
+@keyframes blob-ooze {
+  from { transform: scaleY(.75); }
+  to   { transform: scaleY(1.25); }
+}
 
-    z-index: 2;
-    left: 0;
-    right: 0;
-    bottom: -51px;
+/* Tek bir damla: sap (stem) + uçtaki damla (drop) */
+.drip {
+  position: absolute;
+  top: 6px;
+  width: var(--w);
+  height: 0;
+}
 
-    height: 53px;
+.drip .stem {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 3px;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, #2b0c03, #4e1e0a 45%, #2b0c03);
+  animation: stem-grow var(--dur) ease-in-out var(--delay) infinite;
+}
 
-    background-color: transparent;
+.drip .drop {
+  position: absolute;
+  left: calc(var(--w) * -.15);
+  top: calc(var(--len) - var(--w) * .65);
+  width: calc(var(--w) * 1.3);
+  height: calc(var(--w) * 1.3);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #6a2d13 0%, #3a1406 55%, #2b0c03 100%);
+  animation: drop-fall var(--dur) linear var(--delay) infinite;
+}
 
-    background-image:
+/* Sap yavaşça uzar → damla kopunca geri çekilir */
+@keyframes stem-grow {
+  0%   { height: 3px; }
+  50%  { height: var(--len); }
+  54%  { height: var(--len); }
+  85%  { height: 3px; }
+  100% { height: 3px; }
+}
 
-        /* Üstte devam eden çikolata tabakası */
-        linear-gradient(
-            180deg,
-            #451908 0%,
-            #351105 100%
-        ),
+/* Damla sapla birlikte iner, sonra kopup düşer ve kaybolur */
+@keyframes drop-fall {
+  0% {
+    transform: translateY(calc(var(--len) * -1 + 3px)) scale(.6);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  54% {
+    transform: translateY(3px) scale(1.05, .95);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(.5, 0, 1, .6);
+  }
+  80% {
+    transform: translateY(75px) scale(.8, 1.1);
+    opacity: 1;
+  }
+  86% {
+    transform: translateY(95px) scale(.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(95px) scale(.5);
+    opacity: 0;
+  }
+}
 
-        /* Büyük ve küçük doğal damlalar */
-        radial-gradient(
-            ellipse 17px 37px at 7% 0%,
-            #55210b 0%,
-            #351105 70%,
-            #240900 100%
-        ),
+/* Mobil */
+@media (max-width: 650px) {
+  .site-header > .chocolate-drip { height: 100px; }
+}
 
-        radial-gradient(
-            ellipse 11px 25px at 18% 0%,
-            #633019 0%,
-            #351105 75%,
-            #240900 100%
-        ),
-
-        radial-gradient(
-            ellipse 23px 47px at 29% 0%,
-            #58220c 0%,
-            #351105 72%,
-            #260a02 100%
-        ),
-
-        radial-gradient(
-            ellipse 13px 30px at 42% 0%,
-            #673019 0%,
-            #351105 75%,
-            #260a02 100%
-        ),
-
-        radial-gradient(
-            ellipse 19px 43px at 54% 0%,
-            #54200a 0%,
-            #351105 72%,
-            #240900 100%
-        ),
-
-        radial-gradient(
-            ellipse 12px 27px at 66% 0%,
-            #673019 0%,
-            #351105 75%,
-            #260a02 100%
-        ),
-
-        radial-gradient(
-            ellipse 22px 48px at 77% 0%,
-            #54200a 0%,
-            #351105 72%,
-            #240900 100%
-        ),
-
-        radial-gradient(
-            ellipse 13px 29px at 89% 0%,
-            #633019 0%,
-            #351105 75%,
-            #260a02 100%
-        ),
-
-        radial-gradient(
-            ellipse 18px 39px at 97% 0%,
-            #54200a 0%,
-            #351105 72%,
-            #240900 100%
-        );
-
-    background-repeat: no-repeat;
-
-    background-size:
-        100% 16px,
-        100% 53px,
-        100% 53px,
-        100% 53px,
-        100% 53px,
-        100% 53px,
-        100% 53px,
-        100% 53px,
-        100% 53px,
-        100% 53px;
-
-    background-position:
-        0 0,
-        0 0,
-        0 0,
-        0 0,
-        0 0,
-        0 0,
-        0 0,
-        0 0,
-        0 0,
-        0 0;
-
-    filter:
-        drop-shadow(0 5px 4px rgba(48, 15, 3, .25));
-
-    pointer-events: none;
+/* Hareket azaltma tercihi olanlar için statik damlalar */
+@media (prefers-reduced-motion: reduce) {
+  .drip .stem, .drip .drop, .blob { animation: none; }
+  .drip .stem { height: calc(var(--len) * .7); }
+  .drip .drop { transform: translateY(calc(var(--len) * -.3)); }
 }
 
 /* Mobil uyumluluk */
