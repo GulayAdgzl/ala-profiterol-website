@@ -16,7 +16,25 @@
   <!-- Çikolata (gooey) filtresi -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
-      <filter id="choco-goo" x="-5%" y="-10%" width="110%" height="130%" color-interpolation-filters="sRGB">
+      <!-- Gerçekçi: yapışkan sıvı + parlak (specular) ışık yansıması -->
+      <filter id="choco-goo" x="-5%" y="-10%" width="110%" height="140%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 18 -7" result="goo"/>
+        <feGaussianBlur in="goo" stdDeviation="2" result="soft"/>
+        <feSpecularLighting in="soft" surfaceScale="5" specularConstant="1.2"
+                            specularExponent="26" lighting-color="#ffe2bd" result="spec">
+          <feDistantLight azimuth="235" elevation="48"/>
+        </feSpecularLighting>
+        <feComposite in="spec" in2="goo" operator="in" result="specClip"/>
+        <feComposite in="goo" in2="specClip" operator="arithmetic" k1="0" k2="1" k3="0.85" k4="0"/>
+      </filter>
+
+      <!-- Hafif versiyon (mobil): sadece yapışkan sıvı, parlama yok -->
+      <filter id="choco-goo-lite" x="-5%" y="-10%" width="110%" height="140%" color-interpolation-filters="sRGB">
         <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
         <feColorMatrix in="blur" mode="matrix"
           values="1 0 0 0 0
@@ -46,6 +64,7 @@
     <!-- Animasyonlu çikolata damlaları (script.js doldurur) -->
     <div class="chocolate-drip" aria-hidden="true">
       <span class="choco-bar"></span>
+      <span class="choco-edge"></span><!-- choco-edge.png varsa otomatik devreye girer -->
     </div>
   </header>
 
