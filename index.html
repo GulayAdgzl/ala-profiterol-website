@@ -12,7 +12,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="choco-goo" x="-5%" y="-10%" width="110%" height="130%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 18 -7"/>
+    </filter>
+  </defs>
+</svg>
 
+<!-- 2) <header class="site-header"> içinde, </nav> etiketinden hemen sonra ekleyin -->
+<div class="chocolate-drip" aria-hidden="true">
+  <span class="choco-bar"></span>
+  <!-- damlalar ve kabarcıklar script.js tarafından buraya eklenir -->
+</div>
 
 
   <header class="site-header">
@@ -214,3 +231,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+<!-- 1) <body> açılışından hemen sonra (header'dan önce) ekleyin: gooey (yapışkan çikolata) filtresi -->
