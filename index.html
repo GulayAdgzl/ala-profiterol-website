@@ -12,27 +12,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Çikolata (gooey) filtresi -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
       <filter id="choco-goo" x="-5%" y="-10%" width="110%" height="130%" color-interpolation-filters="sRGB">
         <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/>
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 18 -7"/>
       </filter>
     </defs>
   </svg>
 
   <header class="site-header">
-    <a class="brand" ...>...</a>
-    <button class="menu-toggle" ...>☰</button>
-    <nav class="main-nav" ...>...</nav>
+    <a class="brand" href="#anasayfa" aria-label="Ala Profiterol Coffee ana sayfa">
+      <img src="ala-logo-fotograf-kirpimi.jpg" alt="Ala Profiterol Coffee logosu">
+      <span><strong>A’la Profiterol</strong><small>COFFEE</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Ana menü">
+      <a class="active" href="#anasayfa">Ana Sayfa</a>
+      <a href="#cesitler">Profiterol Çeşitleri</a>
+      <a href="#icerikler">İçindekiler</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#siparis">Online Sipariş</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
 
+    <!-- Animasyonlu çikolata damlaları (script.js doldurur) -->
     <div class="chocolate-drip" aria-hidden="true">
       <span class="choco-bar"></span>
     </div>
   </header>
-
-
-
 
   <main>
     <section class="hero section" id="anasayfa">
@@ -75,77 +90,65 @@
       </div>
     </section>
 
-    
-<section class="section varieties" id="cesitler">
-  <div class="section-heading">
-    <span class="eyebrow">Her damak zevkine</span>
-    <h2>Profiterol Çeşitlerimiz</h2>
-    <p>
-      A’la’nın özenle hazırlanan çikolatalı profiterol
-      lezzetlerini keşfet.
-    </p>
-  </div>
-
-  <div class="variety-grid">
-
-    <article class="variety-card">
-      <img src="profiterol-menu-referans.jpg"
-           alt="Sütlü çikolatalı A’la profiterol">
-      <div>
-        <h3>Sütlü Çikolatalı</h3>
-        <p>Yumuşak iç kreması ve sütlü çikolata lezzeti.</p>
+    <section class="section varieties" id="cesitler">
+      <div class="section-heading">
+        <span class="eyebrow">Her damak zevkine</span>
+        <h2>Profiterol Çeşitlerimiz</h2>
+        <p>A’la’nın özenle hazırlanan çikolatalı profiterol lezzetlerini keşfet.</p>
       </div>
-    </article>
 
-    <article class="variety-card">
-      <img src="profiterol-menu-referans.jpg"
-           alt="Bitter çikolatalı A’la profiterol">
-      <div>
-        <h3>Bitter Çikolatalı</h3>
-        <p>Yoğun çikolata tadını sevenlere özel.</p>
+      <div class="variety-grid">
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Sütlü çikolatalı A’la profiterol">
+          <div>
+            <h3>Sütlü Çikolatalı</h3>
+            <p>Yumuşak iç kreması ve sütlü çikolata lezzeti.</p>
+          </div>
+        </article>
+
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Bitter çikolatalı A’la profiterol">
+          <div>
+            <h3>Bitter Çikolatalı</h3>
+            <p>Yoğun çikolata tadını sevenlere özel.</p>
+          </div>
+        </article>
+
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Beyaz çikolatalı A’la profiterol">
+          <div>
+            <h3>Beyaz Çikolatalı</h3>
+            <p>Beyaz çikolatanın kendine özgü lezzeti.</p>
+          </div>
+        </article>
+
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Beyaz ve sütlü çikolatalı profiterol">
+          <div>
+            <h3>Karışık Çikolatalı</h3>
+            <p>Beyaz ve sütlü çikolatanın bir araya geldiği lezzet.</p>
+          </div>
+        </article>
+
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Karamel bisküvi soslu profiterol">
+          <div>
+            <h3>Karamel Bisküvi Soslu</h3>
+            <p>Karamel bisküvi sosuyla farklı bir tatlı deneyimi.</p>
+          </div>
+        </article>
       </div>
-    </article>
 
-    <article class="variety-card">
-      <img src="profiterol-menu-referans.jpg"
-           alt="Beyaz çikolatalı A’la profiterol">
-      <div>
-        <h3>Beyaz Çikolatalı</h3>
-        <p>Beyaz çikolatanın kendine özgü lezzeti.</p>
+      <div class="menu-note">
+        <p>Gramaj ve güncel çeşit bilgileri için online menümüzü inceleyebilirsiniz.</p>
+        <a class="button button-light"
+           href="https://tgoyemek.com/restoranlar/355052#bu-restoranin-en-sevilenleri"
+           target="_blank"
+           rel="noopener noreferrer">
+           Menüyü İncele →
+        </a>
       </div>
-    </article>
-
-    <article class="variety-card">
-      <img src="profiterol-menu-referans.jpg"
-           alt="Beyaz ve sütlü çikolatalı profiterol">
-      <div>
-        <h3>Karışık Çikolatalı</h3>
-        <p>Beyaz ve sütlü çikolatanın bir araya geldiği lezzet.</p>
-      </div>
-    </article>
-
-    <article class="variety-card">
-      <img src="profiterol-menu-referans.jpg"
-           alt="Karamel bisküvi soslu profiterol">
-      <div>
-        <h3>Karamel Bisküvi Soslu</h3>
-        <p>Karamel bisküvi sosuyla farklı bir tatlı deneyimi.</p>
-      </div>
-    </article>
-
-  </div>
-
-  <div class="menu-note">
-    <p>Gramaj ve güncel çeşit bilgileri için online menümüzü inceleyebilirsiniz.</p>
-    <a class="button button-light"
-       href="https://tgoyemek.com/restoranlar/355052#bu-restoranin-en-sevilenleri"
-       target="_blank"
-       rel="noopener noreferrer">
-       Menüyü İncele →
-    </a>
-  </div>
-</section>
-
+    </section>
 
     <section class="section gallery" id="galeri">
       <div class="section-heading">
@@ -160,7 +163,6 @@
         <figure><img src="callebaut-cikolatalar.jpg" alt="Kullanılan çikolatalar"><figcaption>Malzemelerimiz</figcaption></figure>
       </div>
     </section>
-
 
     <section class="section reviews" id="yorumlar">
       <div class="section-heading">
@@ -199,9 +201,9 @@
       <div class="order-links">
         <a class="order-button yemek" href="#" aria-label="Yemeksepeti sipariş bağlantısı eklenecek">Yemeksepeti <small>Bağlantı eklenecek</small></a>
         <a class="order-button trendyol"
-   href="https://tgoyemek.com/restoranlar/355052#bu-restoranin-en-sevilenleri"
-   target="_blank"
-   rel="noopener noreferrer">
+           href="https://tgoyemek.com/restoranlar/355052#bu-restoranin-en-sevilenleri"
+           target="_blank"
+           rel="noopener noreferrer">Trendyol Go <small>Siparişe git</small></a>
         <a class="order-button migros" href="#" aria-label="Migros Yemek sipariş bağlantısı eklenecek">MİGROS Yemek <small>Bağlantı eklenecek</small></a>
       </div>
     </section>
@@ -216,7 +218,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-<!-- 1) <body> açılışından hemen sonra (header'dan önce) ekleyin: gooey (yapışkan çikolata) filtresi -->
