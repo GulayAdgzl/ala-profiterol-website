@@ -12,6 +12,73 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  
+<div class="chocolate-drip" aria-hidden="true">
+  <svg viewBox="0 0 1600 100" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="choco" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#57230e"/>
+        <stop offset="35%" stop-color="#421706"/>
+        <stop offset="100%" stop-color="#260b03"/>
+      </linearGradient>
+      <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#d18a52" stop-opacity=".1"/>
+        <stop offset="40%" stop-color="#e9ae78" stop-opacity=".8"/>
+        <stop offset="65%" stop-color="#8b4925" stop-opacity=".15"/>
+        <stop offset="100%" stop-color="#e9ae78" stop-opacity=".5"/>
+      </linearGradient>
+    </defs>
+
+    <path fill="url(#choco)" d="
+      M0 0 H1600 V25
+      C1575 25 1570 30 1568 47
+      C1565 68 1557 77 1549 67
+      C1541 58 1545 36 1538 29
+      C1515 24 1480 25 1455 27
+      C1440 30 1437 37 1435 53
+      C1433 69 1426 74 1418 65
+      C1411 56 1417 35 1409 29
+      C1370 23 1325 24 1300 28
+      C1285 32 1280 40 1278 64
+      C1276 87 1267 93 1258 79
+      C1250 66 1258 38 1248 30
+      C1205 23 1160 25 1135 29
+      C1120 33 1117 40 1115 53
+      C1112 68 1104 73 1097 63
+      C1090 53 1096 35 1088 29
+      C1050 24 1010 24 985 28
+      C965 31 961 41 959 63
+      C956 85 947 92 938 77
+      C930 64 938 37 928 30
+      C890 23 850 24 825 28
+      C808 32 805 40 802 56
+      C799 74 790 80 782 68
+      C775 56 782 36 773 29
+      C735 23 690 25 665 29
+      C649 33 645 43 643 69
+      C640 91 631 96 622 80
+      C614 66 622 39 612 30
+      C570 23 530 24 505 28
+      C488 32 484 40 482 56
+      C479 73 470 79 462 67
+      C455 55 463 35 453 29
+      C415 23 375 24 350 28
+      C333 32 329 42 327 68
+      C324 89 315 95 306 79
+      C298 65 306 38 296 30
+      C255 23 210 25 185 29
+      C168 32 164 41 162 57
+      C159 74 150 80 142 67
+      C135 55 142 36 133 29
+      C90 23 50 25 0 25 Z
+    "/>
+
+    <path d="M0 3 H1600" stroke="url(#shine)"
+      stroke-width="3" fill="none" opacity=".8"/>
+  </svg>
+</div>
+
   <header class="site-header">
     <a class="brand" href="#anasayfa" aria-label="Ala Profiterol Coffee ana sayfa">
       <img src="ala-logo-fotograf-kirpimi.jpg" alt="Ala Profiterol Coffee logosu">
