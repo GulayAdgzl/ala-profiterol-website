@@ -1,4 +1,3 @@
-
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
 
@@ -52,9 +51,11 @@ if ("IntersectionObserver" in window && sections.length && navLinks.length) {
 // Footer yılı
 const yearElement = document.getElementById("year");
 
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
-
-// Çikolata damlaları — script.js dosyasının sonuna ekleyin
+// Çikolata damlaları
 const chocoDrip = document.querySelector(".chocolate-drip");
 
 if (chocoDrip) {
@@ -72,14 +73,14 @@ if (chocoDrip) {
 
     // Şerit altındaki organik kabarcıklar
     const blobCount = Math.round(width / (mobile ? 70 : 95));
+    const blobSlot = width / blobCount;
     for (let i = 0; i < blobCount; i++) {
       const blob = document.createElement("span");
       blob.className = "blob";
-      const slot = width / blobCount;
-      const bw = rand(slot * 0.7, slot * 1.3);
       blob.style.cssText =
-        `left:${i * slot + rand(-10, 10)}px;` +
-        `width:${bw}px;height:${rand(7, 15)}px;` +
+        `left:${i * blobSlot + rand(-10, 10)}px;` +
+        `width:${rand(blobSlot * 0.7, blobSlot * 1.3)}px;` +
+        `height:${rand(7, 15)}px;` +
         `--bdur:${rand(5, 9)}s;--bdelay:${-rand(0, 6)}s`;
       chocoDrip.appendChild(blob);
     }
@@ -105,14 +106,10 @@ if (chocoDrip) {
 
   buildDrips();
 
-  // Sadece genişlik değişince yeniden üret (mobilde adres çubuğu kaymasını yoksay)
+  // Sadece genişlik değişince yeniden üret
   let resizeTimer;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(buildDrips, 200);
   });
 }
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
-
