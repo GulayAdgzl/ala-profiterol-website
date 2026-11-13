@@ -31,3 +31,72 @@
 .google-g { font-size:17px; background-image:conic-gradient(#4285f4 0 25%,#34a853 25% 48%,#fbbc05 48% 72%,#ea4335 72%); }
 .review-disclaimer { margin:15px auto 0; text-align:center; color:#927c69; font-size:11px; }
 @media(max-width:650px) { .review-card-top { align-items:flex-start; } .review-profile { align-items:flex-start; gap:14px; } .review-avatar { flex-basis:62px; width:62px; height:62px; font-size:18px; } .review-business h3 { font-size:19px; } .review-stars { flex-wrap:wrap; font-size:19px; } .review-stars small { flex-basis:100%; margin:4px 0 0; } .review-card-bottom { align-items:stretch; flex-direction:column; } .google-review-button { width:100%; } }
+
+
+/* === A'la chocolate drip header — step 1 === */
+.site-header{
+  position:sticky;
+  isolation:isolate;
+  overflow:visible;
+  background:
+    linear-gradient(180deg,rgba(255,220,180,.07),transparent 42%),
+    linear-gradient(105deg,#2b0d04 0%,#4a1a08 48%,#2b0d04 100%);
+  box-shadow:0 9px 22px rgba(45,15,4,.18);
+  z-index:30;
+}
+.site-header > *{position:relative;z-index:3}
+.site-header::before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  left:0;right:0;
+  bottom:-2px;
+  height:2px;
+  background:linear-gradient(90deg,#8b4a25,#e2a36a 24%,#6d3217 55%,#d18a50 78%,#4a1a08);
+  opacity:.85;
+  pointer-events:none;
+}
+.site-header::after{
+  content:"";
+  position:absolute;
+  z-index:2;
+  left:0;right:0;
+  bottom:-35px;
+  height:37px;
+  background:
+    linear-gradient(180deg,#4b1a08 0%,#351105 62%,#260b03 100%);
+  clip-path:polygon(
+    0 0,100% 0,100% 48%,
+    98.8% 48%,98.1% 100%,97.3% 100%,96.7% 48%,
+    91.5% 48%,90.8% 72%,90.1% 72%,89.5% 48%,
+    84% 48%,83.2% 100%,82.4% 100%,81.8% 48%,
+    76% 48%,75.2% 68%,74.5% 68%,73.9% 48%,
+    68% 48%,67.2% 100%,66.4% 100%,65.8% 48%,
+    59% 48%,58.2% 76%,57.4% 76%,56.8% 48%,
+    51% 48%,50.2% 100%,49.4% 100%,48.8% 48%,
+    42% 48%,41.2% 72%,40.4% 72%,39.8% 48%,
+    33% 48%,32.2% 100%,31.4% 100%,30.8% 48%,
+    24% 48%,23.2% 75%,22.4% 75%,21.8% 48%,
+    16% 48%,15.2% 100%,14.4% 100%,13.8% 48%,
+    8% 48%,7.2% 76%,6.4% 76%,5.8% 48%,
+    0 48%
+  );
+  filter:drop-shadow(0 5px 4px rgba(46,14,3,.22));
+  pointer-events:none;
+}
+@media(max-width:650px){
+  .site-header::after{
+    bottom:-27px;
+    height:29px;
+    clip-path:polygon(
+      0 0,100% 0,100% 46%,
+      96% 46%,95% 100%,93.8% 100%,93% 46%,
+      82% 46%,81% 72%,79.8% 72%,79% 46%,
+      68% 46%,67% 100%,65.8% 100%,65% 46%,
+      53% 46%,52% 76%,50.8% 76%,50% 46%,
+      38% 46%,37% 100%,35.8% 100%,35% 46%,
+      23% 46%,22% 72%,20.8% 72%,20% 46%,
+      8% 46%,7% 100%,5.8% 100%,5% 46%,0 46%
+    );
+  }
+}
