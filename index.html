@@ -12,42 +12,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <filter id="choco-goo" x="-5%" y="-10%" width="110%" height="130%" color-interpolation-filters="sRGB">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-      <feColorMatrix in="blur" mode="matrix"
-        values="1 0 0 0 0
-                0 1 0 0 0
-                0 0 1 0 0
-                0 0 0 18 -7"/>
-    </filter>
-  </defs>
-</svg>
-
-<!-- 2) <header class="site-header"> içinde, </nav> etiketinden hemen sonra ekleyin -->
-<div class="chocolate-drip" aria-hidden="true">
-  <span class="choco-bar"></span>
-  <!-- damlalar ve kabarcıklar script.js tarafından buraya eklenir -->
-</div>
-
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="choco-goo" x="-5%" y="-10%" width="110%" height="130%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/>
+      </filter>
+    </defs>
+  </svg>
 
   <header class="site-header">
-    <a class="brand" href="#anasayfa" aria-label="Ala Profiterol Coffee ana sayfa">
-      <img src="ala-logo-fotograf-kirpimi.jpg" alt="Ala Profiterol Coffee logosu">
-      <span><strong>A’la Profiterol</strong><small>COFFEE</small></span>
-    </a>
-    <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
-    <nav class="main-nav" aria-label="Ana menü">
-      <a class="active" href="#anasayfa">Ana Sayfa</a>
-      <a href="#cesitler">Profiterol Çeşitleri</a>
-      <a href="#icerikler">İçindekiler</a>
-      <a href="#galeri">Galeri</a>
-      <a href="#yorumlar">Yorumlar</a>
-      <a href="#siparis">Online Sipariş</a>
-      <a href="#iletisim">İletişim</a>
-    </nav>
+    <a class="brand" ...>...</a>
+    <button class="menu-toggle" ...>☰</button>
+    <nav class="main-nav" ...>...</nav>
+
+    <div class="chocolate-drip" aria-hidden="true">
+      <span class="choco-bar"></span>
+    </div>
   </header>
+
+
+
 
   <main>
     <section class="hero section" id="anasayfa">
