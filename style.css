@@ -1,11 +1,9 @@
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:#fff4e5;color:#3a180c;font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}.site-header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px clamp(18px,5vw,76px);background:#351307;color:#fff0d8;box-shadow:0 5px 24px #35130730}.site-header:after{content:"";position:absolute;left:0;right:0;bottom:-22px;height:26px;background:radial-gradient(ellipse at 8% 0,#351307 0 48%,transparent 51%),radial-gradient(ellipse at 28% 0,#351307 0 48%,transparent 51%),radial-gradient(ellipse at 52% 0,#351307 0 48%,transparent 51%),radial-gradient(ellipse at 76% 0,#351307 0 48%,transparent 51%);pointer-events:none}.brand{display:flex;align-items:center;gap:10px;min-width:205px}.brand img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:1px solid #d5ad79}.brand span,.footer-brand span{font:600 18px "Playfair Display",serif}.brand small,.footer-brand small{display:block;text-align:center;letter-spacing:4px;font:10px "DM Sans",sans-serif}.main-nav{display:flex;align-items:center;gap:clamp(12px,2.2vw,30px);font-size:13px}.main-nav a{padding:9px 0;transition:color .2s}.main-nav a:hover,.main-nav a.active{color:#e9bd83}.menu-toggle{display:none;background:none;border:0;color:white;font-size:25px}.section{padding:88px clamp(20px,7vw,110px)}.hero{min-height:570px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px;padding-top:90px;background:radial-gradient(ellipse at 78% 40%,#e9c39a 0,transparent 48%),linear-gradient(120deg,#fff2df,#f3d2ad)}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;color:#9a5b32}.hero h1{font:600 clamp(42px,5vw,68px)/1.08 "Playfair Display",serif;margin:14px 0}.hero h1 em{color:#8a3c19}.hero-copy>p:not(.eyebrow){max-width:460px;line-height:1.7;color:#65412e}.button{display:inline-flex;gap:22px;align-items:center;margin-top:18px;padding:14px 22px;border-radius:30px;font-weight:700}.button-light{background:#4a1d0c;color:#fff0dd;box-shadow:0 8px 18px #4a1d0c25}.fresh-note{margin-top:30px;font-size:13px;color:#70452e}.fresh-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#7d9b55;margin-right:8px}.hero-visual{position:relative}.hero-visual>img{width:100%;max-height:420px;object-fit:cover;border-radius:48% 48% 24px 24px;box-shadow:0 22px 50px #6e321e30}.hero-stamp{position:absolute;right:-12px;bottom:20px;background:#fff0dc;border:1px solid #b77b4c;border-radius:50%;width:112px;height:112px;display:grid;place-content:center;text-align:center;font:italic 15px "Playfair Display";transform:rotate(9deg);box-shadow:0 8px 25px #4a1d0c20}.ingredients,.gallery{background:#fff9ef}.section-heading{text-align:center;margin:0 auto 38px;max-width:650px}.section-heading h2,.order h2{font:600 clamp(32px,4vw,44px) "Playfair Display",serif;margin:8px 0}.section-heading p,.order p{color:#795943;line-height:1.6}.chocolate-feature{display:grid;grid-template-columns:minmax(220px,.8fr) 1.2fr;align-items:center;gap:36px;max-width:980px;margin:0 auto 34px;padding:20px;background:#f2dfc7;border-radius:22px}.chocolate-feature img{width:100%;height:220px;object-fit:cover;object-position:center;border-radius:14px}.chocolate-feature h3{font:600 27px "Playfair Display";margin:8px 0}.chocolate-feature p{color:#76523b}.choc-tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.choc-tags span{padding:8px 12px;border-radius:20px;background:#4b200f;color:#fff0df;font-size:12px}.chocolate-feature small{color:#806b5a;line-height:1.5}.ingredient-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}.ingredient-card{text-align:center;padding:22px 12px;background:#f7e8d5;border-radius:18px}.ingredient-icon{font-size:30px}.ingredient-card h3{font:600 17px "Playfair Display";margin:10px 0 5px}.ingredient-card p{font-size:12px;color:#80614a;line-height:1.5;margin:0}.varieties{background:linear-gradient(180deg,#f4dfc7,#fff4e7)}.variety-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.variety-card{overflow:hidden;background:#fff9f0;border-radius:18px;box-shadow:0 10px 26px #5a2b1615}.variety-card img{width:100%;height:190px;object-fit:cover;object-position:center}.variety-card div{padding:17px 19px}.variety-card h3{font:600 19px "Playfair Display";margin:0 0 6px}.variety-card p{font-size:13px;color:#80614a;margin:0}.menu-note{text-align:center;color:#80614a;font-size:12px;margin-top:24px}.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:220px 220px;gap:15px}.gallery-grid figure{position:relative;margin:0;overflow:hidden;border-radius:16px;background:#e7c6a4}.gallery-grid .gallery-large{grid-row:span 2}.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gallery-grid figure:hover img{transform:scale(1.05)}.gallery-grid figcaption{position:absolute;left:12px;bottom:12px;padding:8px 13px;background:#351307d9;color:#fff1df;border-radius:20px;font-size:12px}.order{display:flex;justify-content:space-between;align-items:center;gap:35px;background:#eed2b2}.order-copy{max-width:400px}.order-links{display:flex;flex-wrap:wrap;gap:12px}.order-button{min-width:155px;padding:15px 18px;border-radius:15px;color:white;text-align:center;font-weight:700;box-shadow:0 8px 20px #54251220}.order-button small{display:block;font-size:10px;font-weight:400;opacity:.85;margin-top:5px}.yemek{background:#e31837}.trendyol{background:#f36f21}.migros{background:#f59a16}footer{display:grid;grid-template-columns:1fr 1fr 2fr;align-items:center;gap:24px;padding:34px clamp(20px,7vw,110px) 20px;background:#351307;color:#fff0dc}.footer-brand{display:flex;align-items:center;gap:10px}.footer-brand img{width:50px;height:50px;border-radius:50%;object-fit:cover}.footer-brand span{font-size:17px}.footer-brand small{letter-spacing:3px}.footer-info{display:flex;justify-content:flex-end;gap:25px;font-size:12px;line-height:1.7}.footer-info b{font-weight:500;color:#e4c5a4}.footer-info a{align-self:center;color:#e4c5a4}.copyright{grid-column:1/-1;text-align:center;border-top:1px solid #ffffff25;padding-top:18px;color:#c9a88b;font-size:11px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:#fff4e5;color:#3a180c;font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}.brand{display:flex;align-items:center;gap:10px;min-width:205px}.brand img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:1px solid #d5ad79}.brand span,.footer-brand span{font:600 18px "Playfair Display",serif}.brand small,.footer-brand small{display:block;text-align:center;letter-spacing:4px;font:10px "DM Sans",sans-serif}.main-nav{display:flex;align-items:center;gap:clamp(12px,2.2vw,30px);font-size:13px}.main-nav a{padding:9px 0;transition:color .2s}.main-nav a:hover,.main-nav a.active{color:#e9bd83}.menu-toggle{display:none;background:none;border:0;color:white;font-size:25px}.section{padding:88px clamp(20px,7vw,110px)}.hero{min-height:570px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px;padding-top:90px;background:radial-gradient(ellipse at 78% 40%,#e9c39a 0,transparent 48%),linear-gradient(120deg,#fff2df,#f3d2ad)}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;color:#9a5b32}.hero h1{font:600 clamp(42px,5vw,68px)/1.08 "Playfair Display",serif;margin:14px 0}.hero h1 em{color:#8a3c19}.hero-copy>p:not(.eyebrow){max-width:460px;line-height:1.7;color:#65412e}.button{display:inline-flex;gap:22px;align-items:center;margin-top:18px;padding:14px 22px;border-radius:30px;font-weight:700}.button-light{background:#4a1d0c;color:#fff0dd;box-shadow:0 8px 18px #4a1d0c25}.fresh-note{margin-top:30px;font-size:13px;color:#70452e}.fresh-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#7d9b55;margin-right:8px}.hero-visual{position:relative}.hero-visual>img{width:100%;max-height:420px;object-fit:cover;border-radius:48% 48% 24px 24px;box-shadow:0 22px 50px #6e321e30}.hero-stamp{position:absolute;right:-12px;bottom:20px;background:#fff0dc;border:1px solid #b77b4c;border-radius:50%;width:112px;height:112px;display:grid;place-content:center;text-align:center;font:italic 15px "Playfair Display";transform:rotate(9deg);box-shadow:0 8px 25px #4a1d0c20}.ingredients,.gallery{background:#fff9ef}.section-heading{text-align:center;margin:0 auto 38px;max-width:650px}.section-heading h2,.order h2{font:600 clamp(32px,4vw,44px) "Playfair Display",serif;margin:8px 0}.section-heading p,.order p{color:#795943;line-height:1.6}.chocolate-feature{display:grid;grid-template-columns:minmax(220px,.8fr) 1.2fr;align-items:center;gap:36px;max-width:980px;margin:0 auto 34px;padding:20px;background:#f2dfc7;border-radius:22px}.chocolate-feature img{width:100%;height:220px;object-fit:cover;object-position:center;border-radius:14px}.chocolate-feature h3{font:600 27px "Playfair Display";margin:8px 0}.chocolate-feature p{color:#76523b}.choc-tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.choc-tags span{padding:8px 12px;border-radius:20px;background:#4b200f;color:#fff0df;font-size:12px}.chocolate-feature small{color:#806b5a;line-height:1.5}.ingredient-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}.ingredient-card{text-align:center;padding:22px 12px;background:#f7e8d5;border-radius:18px}.ingredient-icon{font-size:30px}.ingredient-card h3{font:600 17px "Playfair Display";margin:10px 0 5px}.ingredient-card p{font-size:12px;color:#80614a;line-height:1.5;margin:0}.varieties{background:linear-gradient(180deg,#f4dfc7,#fff4e7)}.variety-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.variety-card{overflow:hidden;background:#fff9f0;border-radius:18px;box-shadow:0 10px 26px #5a2b1615}.variety-card img{width:100%;height:190px;object-fit:cover;object-position:center}.variety-card div{padding:17px 19px}.variety-card h3{font:600 19px "Playfair Display";margin:0 0 6px}.variety-card p{font-size:13px;color:#80614a;margin:0}.menu-note{text-align:center;color:#80614a;font-size:12px;margin-top:24px}.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:220px 220px;gap:15px}.gallery-grid figure{position:relative;margin:0;overflow:hidden;border-radius:16px;background:#e7c6a4}.gallery-grid .gallery-large{grid-row:span 2}.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gallery-grid figure:hover img{transform:scale(1.05)}.gallery-grid figcaption{position:absolute;left:12px;bottom:12px;padding:8px 13px;background:#351307d9;color:#fff1df;border-radius:20px;font-size:12px}.order{display:flex;justify-content:space-between;align-items:center;gap:35px;background:#eed2b2}.order-copy{max-width:400px}.order-links{display:flex;flex-wrap:wrap;gap:12px}.order-button{min-width:155px;padding:15px 18px;border-radius:15px;color:white;text-align:center;font-weight:700;box-shadow:0 8px 20px #54251220}.order-button small{display:block;font-size:10px;font-weight:400;opacity:.85;margin-top:5px}.yemek{background:#e31837}.trendyol{background:#f36f21}.migros{background:#f59a16}footer{display:grid;grid-template-columns:1fr 1fr 2fr;align-items:center;gap:24px;padding:34px clamp(20px,7vw,110px) 20px;background:#351307;color:#fff0dc}.footer-brand{display:flex;align-items:center;gap:10px}.footer-brand img{width:50px;height:50px;border-radius:50%;object-fit:cover}.footer-brand span{font-size:17px}.footer-brand small{letter-spacing:3px}.footer-info{display:flex;justify-content:flex-end;gap:25px;font-size:12px;line-height:1.7}.footer-info b{font-weight:500;color:#e4c5a4}.footer-info a{align-self:center;color:#e4c5a4}.copyright{grid-column:1/-1;text-align:center;border-top:1px solid #ffffff25;padding-top:18px;color:#c9a88b;font-size:11px}
 @media(max-width:900px){.main-nav{gap:12px;font-size:11px}.brand{min-width:auto}.brand span{font-size:15px}.section{padding:70px 5vw}.ingredient-grid{grid-template-columns:repeat(3,1fr)}.variety-grid{grid-template-columns:repeat(2,1fr)}footer{grid-template-columns:1fr 1fr}.footer-info{grid-column:1/-1;justify-content:flex-start}}
 @media(max-width:650px){.site-header{padding:10px 18px}.menu-toggle{display:block;z-index:2}.main-nav{display:none;position:absolute;top:70px;left:0;right:0;padding:20px;background:#351307;flex-direction:column;align-items:stretch;gap:5px}.main-nav.open{display:flex}.main-nav a{padding:12px;border-bottom:1px solid #ffffff18;font-size:14px}.hero{grid-template-columns:1fr;padding-top:75px;gap:25px}.hero h1{font-size:43px}.hero-visual>img{max-height:300px}.hero-stamp{width:90px;height:90px;font-size:12px}.chocolate-feature{grid-template-columns:1fr;gap:18px}.chocolate-feature img{height:190px}.ingredient-grid{grid-template-columns:repeat(2,1fr)}.variety-grid{grid-template-columns:1fr 1fr;gap:12px}.variety-card img{height:140px}.variety-card div{padding:12px}.variety-card h3{font-size:16px}.variety-card p{font-size:11px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.gallery-grid .gallery-large{grid-row:auto;grid-column:span 2}.order{display:block}.order-links{margin-top:22px}.order-button{flex:1;min-width:130px}footer{grid-template-columns:1fr;gap:18px;text-align:center}.footer-brand{justify-content:center}.footer-info{flex-direction:column;gap:10px;align-items:center}.copyright{grid-column:auto}}
 
 
 /* Realistic chocolate-inspired decorative details */
-.site-header { isolation:isolate; }
-.site-header:before { content:""; position:absolute; z-index:-1; left:0; right:0; bottom:-19px; height:30px; background:radial-gradient(ellipse 17px 22px at 8% 0,#351307 98%,transparent 100%),radial-gradient(ellipse 13px 19px at 19% 0,#351307 98%,transparent 100%),radial-gradient(ellipse 21px 26px at 34% 0,#351307 98%,transparent 100%),radial-gradient(ellipse 14px 20px at 51% 0,#351307 98%,transparent 100%),radial-gradient(ellipse 19px 25px at 68% 0,#351307 98%,transparent 100%),radial-gradient(ellipse 13px 18px at 83% 0,#351307 98%,transparent 100%),radial-gradient(ellipse 18px 23px at 96% 0,#351307 98%,transparent 100%); pointer-events:none; }
 .hero { position:relative; overflow:hidden; }
 .hero:after { content:""; position:absolute; left:0; right:0; bottom:-1px; height:20px; background:radial-gradient(ellipse 20px 18px at 12% 0,#fff4e5 98%,transparent 100%),radial-gradient(ellipse 12px 12px at 28% 0,#fff4e5 98%,transparent 100%),radial-gradient(ellipse 24px 20px at 49% 0,#fff4e5 98%,transparent 100%),radial-gradient(ellipse 15px 15px at 73% 0,#fff4e5 98%,transparent 100%),radial-gradient(ellipse 22px 19px at 91% 0,#fff4e5 98%,transparent 100%); opacity:.72; pointer-events:none; }
 .chocolate-feature { position:relative; overflow:hidden; }
@@ -33,83 +31,32 @@
 @media(max-width:650px) { .review-card-top { align-items:flex-start; } .review-profile { align-items:flex-start; gap:14px; } .review-avatar { flex-basis:62px; width:62px; height:62px; font-size:18px; } .review-business h3 { font-size:19px; } .review-stars { flex-wrap:wrap; font-size:19px; } .review-stars small { flex-basis:100%; margin:4px 0 0; } .review-card-bottom { align-items:stretch; flex-direction:column; } .google-review-button { width:100%; } }
 
 
-/* === A'la chocolate drip header — step 1 === */
-.site-header{
-  position:sticky;
-  isolation:isolate;
-  overflow:visible;
-  background:
-    linear-gradient(180deg,rgba(255,220,180,.07),transparent 42%),
-    linear-gradient(105deg,#2b0d04 0%,#4a1a08 48%,#2b0d04 100%);
-  box-shadow:0 9px 22px rgba(45,15,4,.18);
-  z-index:30;
-}
-.site-header > *{position:relative;z-index:3}
-.site-header::before{
-  content:"";
-  position:absolute;
-  z-index:1;
-  left:0;right:0;
-  bottom:-2px;
-  height:2px;
-  background:linear-gradient(90deg,#8b4a25,#e2a36a 24%,#6d3217 55%,#d18a50 78%,#4a1a08);
-  opacity:.85;
-  pointer-events:none;
-}
-.site-header::after{
-  content:"";
-  position:absolute;
-  z-index:2;
-  left:0;right:0;
-  bottom:-35px;
-  height:37px;
-  background:
-    linear-gradient(180deg,#4b1a08 0%,#351105 62%,#260b03 100%);
-  clip-path:polygon(
-    0 0,100% 0,100% 48%,
-    98.8% 48%,98.1% 100%,97.3% 100%,96.7% 48%,
-    91.5% 48%,90.8% 72%,90.1% 72%,89.5% 48%,
-    84% 48%,83.2% 100%,82.4% 100%,81.8% 48%,
-    76% 48%,75.2% 68%,74.5% 68%,73.9% 48%,
-    68% 48%,67.2% 100%,66.4% 100%,65.8% 48%,
-    59% 48%,58.2% 76%,57.4% 76%,56.8% 48%,
-    51% 48%,50.2% 100%,49.4% 100%,48.8% 48%,
-    42% 48%,41.2% 72%,40.4% 72%,39.8% 48%,
-    33% 48%,32.2% 100%,31.4% 100%,30.8% 48%,
-    24% 48%,23.2% 75%,22.4% 75%,21.8% 48%,
-    16% 48%,15.2% 100%,14.4% 100%,13.8% 48%,
-    8% 48%,7.2% 76%,6.4% 76%,5.8% 48%,
-    0 48%
-  );
-  filter:drop-shadow(0 5px 4px rgba(46,14,3,.22));
-  pointer-events:none;
-}
-@media(max-width:650px){
-  .site-header::after{
-    bottom:-27px;
-    height:29px;
-    clip-path:polygon(
-      0 0,100% 0,100% 46%,
-      96% 46%,95% 100%,93.8% 100%,93% 46%,
-      82% 46%,81% 72%,79.8% 72%,79% 46%,
-      68% 46%,67% 100%,65.8% 100%,65% 46%,
-      53% 46%,52% 76%,50.8% 76%,50% 46%,
-      38% 46%,37% 100%,35.8% 100%,35% 46%,
-      23% 46%,22% 72%,20.8% 72%,20% 46%,
-      8% 46%,7% 100%,5.8% 100%,5% 46%,0 46%
-    );
-  }
-}
-
-
 /* =========================================================
-   ANİMASYONLU ÇİKOLATA DAMLALARI
-   style.css'teki eski ".chocolate-drip" kurallarını
-   ("Gerçek çikolata SVG yüzeyi" bloğunu) silip bunu yapıştırın.
+   HEADER — ÇİKOLATA TEMALI, ANİMASYONLU DAMLALAR
    ========================================================= */
 
-.site-header { isolation: isolate; overflow: visible; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  isolation: isolate;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px clamp(18px, 5vw, 76px);
+  color: #fff0d8;
+  background:
+    linear-gradient(110deg, rgba(255, 210, 160, .07), transparent 35%, rgba(0, 0, 0, .12)),
+    linear-gradient(180deg, #351307 0%, #451907 55%, #2b0c03 100%);
+  box-shadow: 0 8px 24px rgba(45, 16, 5, .22), 0 2px 5px rgba(0, 0, 0, .12);
+}
 
+/* Logo ve navigasyon her zaman damlaların önünde */
+.site-header > * { position: relative; z-index: 3; }
+
+/* Damla katmanı */
 .site-header > .chocolate-drip {
   position: absolute;
   z-index: 2;
@@ -118,11 +65,11 @@
   width: 100%;
   height: 130px;
   pointer-events: none;
-  /* gooey filtre damlaları birbirine/şeride yapıştırır, gölge de üstüne biner */
+  /* gooey filtre damlaları şeride yapıştırır, gölge de üstüne biner */
   filter: url(#choco-goo) drop-shadow(0 5px 4px rgba(40, 12, 3, .35));
 }
 
-/* Üst çikolata şeridi (header ile aynı renk) */
+/* Üst çikolata şeridi (header'ın alt rengiyle aynı) */
 .choco-bar {
   position: absolute;
   left: 0;
@@ -132,7 +79,7 @@
   background: #2b0c03;
 }
 
-/* Şeridin altındaki dalgalı, organik çikolata kabarcıkları */
+/* Şerit altındaki organik kabarcıklar */
 .blob {
   position: absolute;
   top: 6px;
@@ -217,7 +164,6 @@
   }
 }
 
-/* Mobil */
 @media (max-width: 650px) {
   .site-header > .chocolate-drip { height: 100px; }
 }
@@ -228,109 +174,3 @@
   .drip .stem { height: calc(var(--len) * .7); }
   .drip .drop { transform: translateY(calc(var(--len) * -.3)); }
 }
-
-/* Mobil uyumluluk */
-@media (max-width: 650px) {
-
-    .site-header::after {
-        bottom: -34px;
-        height: 36px;
-
-        background-image:
-            linear-gradient(
-                180deg,
-                #451908 0%,
-                #351105 100%
-            ),
-
-            radial-gradient(
-                ellipse 13px 27px at 8% 0%,
-                #54200a 0%,
-                #351105 75%,
-                #240900 100%
-            ),
-
-            radial-gradient(
-                ellipse 17px 34px at 25% 0%,
-                #58220c 0%,
-                #351105 75%,
-                #240900 100%
-            ),
-
-            radial-gradient(
-                ellipse 12px 24px at 43% 0%,
-                #633019 0%,
-                #351105 75%,
-                #240900 100%
-            ),
-
-            radial-gradient(
-                ellipse 19px 35px at 62% 0%,
-                #54200a 0%,
-                #351105 75%,
-                #240900 100%
-            ),
-
-            radial-gradient(
-                ellipse 13px 27px at 81% 0%,
-                #633019 0%,
-                #351105 75%,
-                #240900 100%
-            ),
-
-            radial-gradient(
-                ellipse 16px 33px at 96% 0%,
-                #54200a 0%,
-                #351105 75%,
-                #240900 100%
-            );
-
-        background-repeat: no-repeat;
-        background-size: 100% 12px, 100% 36px, 100% 36px,
-                         100% 36px, 100% 36px, 100% 36px,
-                         100% 36px;
-    }
-}
-
-
-
-/* Eski yapay damla efektlerini kapat */
-.site-header::before,
-.site-header::after {
-    content: none !important;
-}
-
-/* Gerçek çikolata SVG yüzeyi */
-.site-header {
-    position: sticky;
-    isolation: isolate;
-    overflow: visible;
-}
-
-.site-header > .chocolate-drip {
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    bottom: -57px;
-    width: 100%;
-    height: 65px;
-    pointer-events: none;
-
-    filter: drop-shadow(
-        0 5px 4px rgba(40, 12, 3, .35)
-    );
-}
-
-.chocolate-drip svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-@media(max-width:650px) {
-    .site-header > .chocolate-drip {
-        bottom: -43px;
-        height: 49px;
-    }
-}
-
