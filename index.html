@@ -70,17 +70,43 @@
   </header>
 
   <main>
-    <section class="hero section" id="anasayfa">
-      <div class="hero-copy">
-        <p class="eyebrow">Her lokmada mutluluk</p>
-        <h1>Tatlı mutluluğun adı<br><em>A’la Profiterol.</em></h1>
-        <p>Günlük taze olarak hazırlanan profiterollerimiz, çikolata ve kahve keyfiyle buluşuyor.</p>
-        <a class="button button-light" href="#cesitler">Lezzetleri keşfet <span>→</span></a>
-        <div class="fresh-note"><span class="fresh-dot"></span> Her gün taze hazırlanır</div>
-      </div>
-      <div class="hero-visual">
-        <img src="profiterol-cikolata.webp" alt="Havada asılı duran, krema dolgulu A’la profiterol" width="480" height="270" fetchpriority="high">
-        <div class="hero-stamp">Günlük taze<br><b>hazırlanır</b> ♡</div>
+    <!-- Kaydırmayla oynayan çikolata dökülme animasyonu (Apple tarzı) -->
+    <section class="scroll-hero" id="anasayfa" aria-label="A’la Profiterol">
+      <div class="sh-stage">
+        <div class="sh-glow" aria-hidden="true"></div>
+        <canvas class="sh-canvas" width="960" height="540" role="img" aria-label="Üzerine çikolata dökülen A’la profiterol">
+          Üzerine çikolata dökülen A’la profiterol
+        </canvas>
+
+        <div class="sh-beat sh-left" data-a="-1" data-b="0.2">
+          <p class="eyebrow">Her lokmada mutluluk</p>
+          <h1>Tatlı mutluluğun adı<br><em>A’la Profiterol.</em></h1>
+          <p>Günlük taze olarak hazırlanan profiterollerimiz, çikolata ve kahve keyfiyle buluşuyor.</p>
+          <div class="fresh-note"><span class="fresh-dot"></span> Her gün taze hazırlanır</div>
+        </div>
+
+        <div class="sh-beat sh-right" data-a="0.23" data-b="0.48">
+          <p class="eyebrow">Çikolata seçimimiz</p>
+          <h2>Akıp giden<br><em>çikolata keyfi.</em></h2>
+          <p>Sütlü, beyaz ve bitter Callebaut çikolatalar, taze kremayla dolu profiterolün üzerine dökülür.</p>
+        </div>
+
+        <div class="sh-beat sh-left" data-a="0.52" data-b="0.77">
+          <p class="eyebrow">Özenle hazırlanır</p>
+          <h2>Yumuşak krema,<br><em>yoğun çikolata.</em></h2>
+          <p>Her gün taze hazırlanan hamur, her lokmada aynı lezzeti sunar.</p>
+        </div>
+
+        <div class="sh-beat sh-center" data-a="0.82" data-b="2">
+          <p class="eyebrow">Canın tatlı mı çekti?</p>
+          <h2>Şimdi <em>tatmanın</em> zamanı.</h2>
+          <div class="sh-actions">
+            <a class="sh-btn" href="#cesitler">Lezzetleri keşfet <span>→</span></a>
+            <a class="sh-btn sh-btn-ghost" href="#siparis">Online sipariş</a>
+          </div>
+        </div>
+
+        <div class="sh-hint" aria-hidden="true"><span>Kaydır</span><i></i></div>
       </div>
     </section>
 
@@ -236,5 +262,6 @@
     <small class="copyright">© <span id="year"></span> Ala Profiterol Coffee. Tüm hakları saklıdır.</small>
   </footer>
   <script src="script.js"></script>
+  <script src="hero-scroll.js"></script>
 </body>
 </html>
