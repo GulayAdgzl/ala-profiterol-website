@@ -398,3 +398,16 @@
 @media (max-width: 650px) {
   .main-nav { background: #1b0a06; }
 }
+
+/* Menü: hero üzerinde şeffaf, hero'dan sonra yarı saydam koyu + bulanık */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background .35s, border-color .35s, backdrop-filter .35s;
+}
+.site-header.is-solid {
+  background: rgba(27, 10, 6, .82);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom-color: rgba(233, 189, 131, .12);
+}
