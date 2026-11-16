@@ -73,7 +73,7 @@
     const idx = Math.round(frameFor(smooth));
     if (idx !== last) { draw(idx); last = idx; }
     updateBeats(smooth);
-    if (header) header.classList.toggle("is-solid", section.getBoundingClientRect().bottom < header.offsetHeight + 40);
+    if (header) header.classList.toggle("on-hero", section.getBoundingClientRect().bottom > header.offsetHeight);
     requestAnimationFrame(tick);
   };
   tick();
