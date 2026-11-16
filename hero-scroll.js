@@ -32,11 +32,11 @@
     if (!ready) return;
     const cw = canvas.width, ch = canvas.height;
     const portrait = ch > cw * 1.1;
-    // Geniş ekran: tam kaplar (cover). Dikey ekran: yüksekliğin %62'si, üstte
-    const scale = portrait ? Math.max((ch * 0.62) / FH, cw / FW) : Math.max(cw / FW, ch / FH);
+    // Geniş ekran: tam kaplar (cover). Dikey ekran: yüksekliğin %80'i, ortada
+    const scale = portrait ? Math.max((ch * 0.8) / FH, cw / FW) : Math.max(cw / FW, ch / FH);
     const w = FW * scale, h = FH * scale;
     const x = (cw - w) / 2;
-    const y = portrait ? ch * 0.40 - h / 2 : (ch - h) / 2;
+    const y = portrait ? ch * 0.47 - h / 2 : (ch - h) / 2;
     ctx.fillStyle = "#1e0a05";
     ctx.fillRect(0, 0, cw, ch);
     ctx.imageSmoothingQuality = "high";
