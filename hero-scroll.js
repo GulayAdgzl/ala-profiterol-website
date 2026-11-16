@@ -32,15 +32,25 @@
     if (!ready) return;
     const cw = canvas.width, ch = canvas.height;
     const portrait = ch > cw * 1.1;
-    // Geniş ekran: tam kaplar (cover). Dikey ekran: yüksekliğin %80'i, ortada
-    const scale = portrait ? Math.max((ch * 0.8) / FH, cw / FW) : Math.max(cw / FW, ch / FH);
+    // Geniş ekran: tam kaplar (cover). Dikey ekran: profiterol ekran genişliğine sığar,
+    // görselin üst/alt kenarları zeminle eriyerek yazıyla bütünleşir
+    const scale = portrait ? (cw * 1.7) / FW : Math.max(cw / FW, ch / FH);
     const w = FW * scale, h = FH * scale;
     const x = (cw - w) / 2;
-    const y = portrait ? ch * 0.47 - h / 2 : (ch - h) / 2;
+    const y = portrait ? ch * 0.40 - h / 2 : (ch - h) / 2;
     ctx.fillStyle = "#1e0a05";
     ctx.fillRect(0, 0, cw, ch);
     ctx.imageSmoothingQuality = "high";
     ctx.drawImage(sheet, (i % COLS) * FW, Math.floor(i / COLS) * FH, FW, FH, x, y, w, h);
+    if (portrait) {
+      const f = h * 0.34;
+      let g = ctx.createLinearGradient(0, y, 0, y + f);
+      g.addColorStop(0, "rgba(30,10,5,1)"); g.addColorStop(1, "rgba(30,10,5,0)");
+      ctx.fillStyle = g; ctx.fillRect(0, y - 1, cw, f + 1);
+      g = ctx.createLinearGradient(0, y + h - f, 0, y + h);
+      g.addColorStop(0, "rgba(30,10,5,0)"); g.addColorStop(1, "rgba(30,10,5,1)");
+      ctx.fillStyle = g; ctx.fillRect(0, y + h - f, cw, f + 1);
+    }
   };
 
   const getProgress = () => {
