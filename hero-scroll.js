@@ -8,6 +8,7 @@
   const ctx = canvas.getContext("2d");
   const beats = [...section.querySelectorAll(".sh-beat")];
   const hint = section.querySelector(".sh-hint");
+  const header = document.querySelector(".site-header");
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
@@ -72,6 +73,7 @@
     const idx = Math.round(frameFor(smooth));
     if (idx !== last) { draw(idx); last = idx; }
     updateBeats(smooth);
+    if (header) header.classList.toggle("is-solid", section.getBoundingClientRect().bottom < header.offsetHeight + 40);
     requestAnimationFrame(tick);
   };
   tick();
