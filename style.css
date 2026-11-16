@@ -431,3 +431,50 @@
   }
   .sh-beat, .sh-left, .sh-right { bottom: 9vh; }
 }
+
+/* =========================================================
+   İÇİNDEKİLERİMİZ
+   ========================================================= */
+.ingredients {
+  background:
+    radial-gradient(ellipse 60% 70% at 15% 0, #ffe9d6 0, transparent 70%),
+    linear-gradient(180deg, #fcd6ba 0%, #fdddc3 100%);
+  padding-top: 70px; padding-bottom: 70px; overflow: hidden;
+}
+.ing-head { text-align: center; margin-bottom: 34px; }
+.ing-head h2 {
+  display: flex; align-items: center; justify-content: center; gap: 18px;
+  font: 600 clamp(30px, 3.6vw, 42px) "Playfair Display", serif; color: #3a180c; margin: 0;
+}
+.ing-line { flex: 0 1 140px; height: 1px; background: linear-gradient(90deg, transparent, #7b4a2a); }
+.ing-line:last-child { background: linear-gradient(270deg, transparent, #7b4a2a); }
+.ing-head p { margin: 10px 0 0; color: #4d2a18; font-size: 15px; }
+
+.ing-row { display: flex; align-items: center; justify-content: center; gap: clamp(20px, 3.5vw, 56px); max-width: 1180px; margin: 0 auto; }
+.ing-bags { flex: 0 1 430px; text-align: center; }
+.ing-bags img { width: 100%; height: auto; display: block; filter: drop-shadow(0 14px 18px rgba(90, 40, 20, .28)); }
+.ing-bags .choc-tags { justify-content: center; margin: 4px 0 0; }
+.ing-circles { flex: 1 1 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 22px clamp(14px, 2vw, 28px); }
+.ing-circle { margin: 0; width: clamp(88px, 8.6vw, 108px); text-align: center; }
+.ing-circle img {
+  width: 100%; aspect-ratio: 1; border-radius: 50%; display: block; object-fit: contain; padding: 15%;
+  background: radial-gradient(circle at 35% 28%, #fff6ea 0%, #f6d8bb 70%, #efc9a6 100%);
+  box-shadow: 0 8px 18px rgba(110, 50, 30, .18); border: 2px solid rgba(255, 240, 225, .85);
+  transition: transform .35s;
+}
+.ing-circle:hover img { transform: translateY(-4px) scale(1.04); }
+.ing-circle figcaption { margin-top: 10px; font-size: 14px; font-weight: 500; line-height: 1.3; color: #3a180c; }
+.ing-note { max-width: 760px; margin: 30px auto 0; text-align: center; font-size: 11px; line-height: 1.5; color: #8a6a55; }
+
+@media (max-width: 900px) {
+  .ing-row { flex-direction: column; gap: 26px; }
+  .ing-bags { flex-basis: auto; width: min(100%, 440px); }
+  .ing-circles { max-width: 520px; }
+}
+@media (max-width: 650px) {
+  .ingredients { padding-top: 54px; padding-bottom: 54px; }
+  .ing-line { flex-basis: 40px; }
+  .ing-circles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 10px; width: 100%; }
+  .ing-circle { width: 100%; max-width: 100px; margin: 0 auto; }
+  .ing-circle figcaption { font-size: 12.5px; }
+}
