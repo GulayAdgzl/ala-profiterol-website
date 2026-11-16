@@ -424,3 +424,10 @@
   .sh-beat h2 { font-size: 30px; }
   .sh-beat h1, .sh-beat h2 { margin: 8px 0; }
 }
+
+@media (max-width: 650px) {
+  .sh-stage::after {
+    background: linear-gradient(180deg, rgba(20,6,3,.35) 0, transparent 14%, transparent 60%, rgba(30,10,5,.7) 82%, rgba(30,10,5,.85) 100%);
+  }
+  .sh-beat, .sh-left, .sh-right { bottom: 9vh; }
+}
