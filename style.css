@@ -311,3 +311,82 @@
 @media (prefers-reduced-motion: reduce) {
   .cycle-drop { display: none; }
 }
+
+
+/* Hero görseli: koyu zeminli profiterol fotoğrafı */
+.hero-visual > img {
+  aspect-ratio: 5 / 4;
+  max-height: 470px;
+  object-position: 50% 50%;
+  background: #1e0d08;
+}
+@media (max-width: 650px) {
+  .hero-visual > img { max-height: 300px; }
+}
+
+/* =========================================================
+   KAYDIRMAYLA OYNAYAN HERO (Apple tarzı)
+   ========================================================= */
+.scroll-hero { position: relative; height: 480vh; background: #1e0a05; color: #fff0dd; }
+.sh-stage {
+  position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 45%, #2e1309 0%, #1e0a05 55%, #140603 100%);
+}
+.sh-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(233,189,131,.14), transparent 42%);
+}
+.sh-canvas {
+  position: absolute; left: 50%; top: 54%;
+  height: 88vh; height: 88svh; aspect-ratio: 16 / 9; width: auto;
+  transform: translate(-50%, -50%);
+  -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+          mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+}
+.sh-beat {
+  position: absolute; z-index: 2; max-width: 460px;
+  top: 50%; transform: translateY(-50%);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  text-shadow: 0 2px 24px rgba(20,6,3,.7);
+  will-change: transform, opacity;
+}
+.sh-left   { left: clamp(20px, 7vw, 110px); }
+.sh-right  { right: clamp(20px, 7vw, 110px); text-align: right; }
+.sh-right .eyebrow { display: block; }
+.sh-center { left: 0; right: 0; margin: 0 auto; max-width: 640px; text-align: center; top: auto; bottom: 11vh; transform: none; }
+.sh-beat .eyebrow { color: #e9bd83; margin: 0; }
+.sh-beat h1, .sh-beat h2 { font: 600 clamp(36px, 4.8vw, 68px)/1.08 "Playfair Display", serif; margin: 14px 0; color: #fff0dd; }
+.sh-beat h2 { font-size: clamp(32px, 4.2vw, 58px); }
+.sh-beat em { color: #e9bd83; }
+.sh-beat p:not(.eyebrow) { line-height: 1.7; color: #e7cdb2; margin: 0; }
+.sh-beat .fresh-note { color: #e7cdb2; }
+.sh-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px; }
+.sh-btn {
+  display: inline-flex; gap: 14px; align-items: center; padding: 14px 24px; border-radius: 30px;
+  font-weight: 700; background: #f3d2ad; color: #351307; box-shadow: 0 10px 28px rgba(0,0,0,.35);
+  transition: transform .2s, background .2s;
+}
+.sh-btn:hover { transform: translateY(-2px); background: #fff0dd; }
+.sh-btn-ghost { background: transparent; color: #fff0dd; border: 1px solid #e9bd8390; box-shadow: none; }
+.sh-btn-ghost:hover { background: #ffffff14; }
+.sh-hint {
+  position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #e9bd83; transition: opacity .3s;
+}
+.sh-hint i { width: 1px; height: 34px; background: linear-gradient(#e9bd83, transparent); animation: sh-hint 1.8s ease-in-out infinite; transform-origin: top; }
+@keyframes sh-hint { 0% { transform: scaleY(0); } 60% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+
+@media (max-width: 650px) {
+  .scroll-hero { height: 400vh; }
+  .sh-canvas { height: 64vh; height: 64svh; top: 40%; }
+  .sh-beat, .sh-left, .sh-right {
+    left: 20px; right: 20px; max-width: none; text-align: center;
+    top: auto; bottom: 7vh; transform: none;
+  }
+  .sh-beat h1 { font-size: 38px; }
+  .sh-beat h2 { font-size: 32px; }
+  .sh-beat p:not(.eyebrow) { font-size: 14px; }
+  .sh-center { bottom: 9vh; }
+}
+@media (prefers-reduced-motion: reduce) { .sh-hint i { animation: none; } }
