@@ -410,3 +410,17 @@
   background: transparent;
   border-bottom-color: transparent;
 }
+
+/* Logo */
+.brand img, .footer-brand img { object-fit: contain; border: 0; background: transparent; }
+
+/* Mobil: metin görselin üzerine biner (web'deki gibi) */
+@media (max-width: 650px) {
+  .sh-stage::after {
+    background: linear-gradient(180deg, rgba(20,6,3,.5) 0, transparent 18%, transparent 42%, rgba(20,6,3,.78) 78%, rgba(20,6,3,.9) 100%);
+  }
+  .sh-beat, .sh-left, .sh-right { bottom: 8vh; }
+  .sh-beat h1 { font-size: 36px; }
+  .sh-beat h2 { font-size: 30px; }
+  .sh-beat h1, .sh-beat h2 { margin: 8px 0; }
+}
