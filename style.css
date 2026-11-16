@@ -336,12 +336,11 @@
   position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(circle at 50% 50%, rgba(233,189,131,.14), transparent 42%);
 }
-.sh-canvas {
-  position: absolute; left: 50%; top: 54%;
-  height: 88vh; height: 88svh; aspect-ratio: 16 / 9; width: auto;
-  transform: translate(-50%, -50%);
-  -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
-          mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+.sh-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sh-stage.no-sprite { background: #1e0a05 url("profiterol-cikolata.webp") center / cover no-repeat; }
+.sh-stage::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: linear-gradient(180deg, rgba(20,6,3,.55) 0, transparent 22%, transparent 70%, rgba(20,6,3,.6) 100%);
 }
 .sh-beat {
   position: absolute; z-index: 2; max-width: 460px;
@@ -379,7 +378,6 @@
 
 @media (max-width: 650px) {
   .scroll-hero { height: 400vh; }
-  .sh-canvas { height: 64vh; height: 64svh; top: 40%; }
   .sh-beat, .sh-left, .sh-right {
     left: 20px; right: 20px; max-width: none; text-align: center;
     top: auto; bottom: 7vh; transform: none;
