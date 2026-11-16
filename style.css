@@ -388,3 +388,13 @@
   .sh-center { bottom: 9vh; }
 }
 @media (prefers-reduced-motion: reduce) { .sh-hint i { animation: none; } }
+
+/* Menü rengi: hero animasyonundaki koyu çikolata tonuyla bütünleşik */
+.site-header {
+  background: #1b0a06;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(233, 189, 131, .12);
+}
+@media (max-width: 650px) {
+  .main-nav { background: #1b0a06; }
+}
