@@ -1,5 +1,543 @@
 
 /* =========================================================
+   A'LA PROFITEROL — İÇİNDEKİLERİMİZ
+   ========================================================= */
+
+.ingredients {
+  position: relative;
+  width: min(1200px, calc(100% - 40px));
+  margin: 55px auto 0;
+  padding: 35px clamp(15px, 3vw, 35px) 25px;
+  overflow: hidden;
+  border-radius: 26px;
+  background:
+    radial-gradient(ellipse at 15% 10%, #fff0df 0%, transparent 45%),
+    linear-gradient(145deg, #f9e4d0, #f5d5b9);
+  border: 1px solid rgba(139, 79, 43, .18);
+  box-shadow: 0 18px 45px rgba(75, 32, 15, .08);
+}
+
+/* Başlık */
+
+.ing-head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.ing-head h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin: 0;
+  color: #3a180c;
+  font: 700 clamp(30px, 3.5vw, 46px)/1.2 "Playfair Display", serif;
+}
+
+.ing-line {
+  display: block;
+  width: min(180px, 18%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #75401f);
+}
+
+.ing-line:last-child {
+  transform: rotate(180deg);
+}
+
+.ing-head p {
+  margin: 8px 0 0;
+  color: #643820;
+  font: italic clamp(15px, 1.6vw, 20px) "Playfair Display", serif;
+}
+
+/* Ana içerik */
+
+.ing-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Çikolata paketleri */
+
+.ing-bags {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.ing-bags > img {
+  display: block;
+  width: 100%;
+  max-width: 490px;
+  height: 310px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 10px rgba(65, 30, 12, .12));
+}
+
+/* Çikolata etiketleri */
+
+.choc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.choc-tags span {
+  padding: 7px 13px;
+  border: 1px solid rgba(117, 64, 31, .25);
+  border-radius: 30px;
+  background: rgba(255, 248, 237, .75);
+  color: #60351e;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Malzeme görselleri */
+
+.ing-circles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  align-items: start;
+  gap: 15px 12px;
+}
+
+.ing-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.ing-circle img {
+  display: block;
+  width: clamp(85px, 10vw, 125px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, .9);
+  border-radius: 50%;
+  background: #fff0df;
+  box-shadow:
+    0 5px 15px rgba(75, 32, 15, .12),
+    inset 0 0 10px rgba(255, 255, 255, .5);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.ing-circle figcaption {
+  margin-top: 7px;
+  color: #4b2411;
+  font: 600 clamp(14px, 1.3vw, 18px)/1.2 "Playfair Display", serif;
+}
+
+.ing-circle:hover img {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 20px rgba(75, 32, 15, .18);
+}
+
+/* İçindekiler açıklaması */
+
+.ing-note {
+  max-width: 750px;
+  margin: 20px auto 0;
+  color: #987d68;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LEZZETİN SIRRI — KALİTE ALANI
+   ========================================================= */
+
+.quality-section {
+  position: relative;
+  max-width: 1100px;
+  margin: 75px auto 20px;
+  padding: 55px clamp(18px, 4vw, 45px) 38px;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse at 10% 0%, #fff3e3 0%, transparent 45%),
+    linear-gradient(145deg, #f8e5d0, #f2d5b8);
+  border: 1px solid rgba(139, 79, 43, .18);
+  box-shadow: 0 18px 45px rgba(75, 32, 15, .10);
+}
+
+/* Kalite başlığı */
+
+.quality-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.quality-eyebrow {
+  display: inline-block;
+  color: #9a5b32;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.quality-heading h3 {
+  margin: 12px 0 8px;
+  color: #3a180c;
+  font: 600 clamp(35px, 4vw, 49px)/1.15 "Playfair Display", serif;
+}
+
+.quality-heading p {
+  margin: 0;
+  color: #80543a;
+  font: italic 18px "Playfair Display", serif;
+}
+
+/* Kalite kartları */
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.quality-card {
+  position: relative;
+  min-height: 360px;
+  padding: 34px clamp(20px, 3vw, 36px) 30px;
+  overflow: hidden;
+  border: 1px solid rgba(153, 93, 52, .28);
+  border-radius: 25px;
+  background: rgba(255, 249, 239, .82);
+  box-shadow: 0 12px 30px rgba(75, 32, 15, .08);
+}
+
+/* Kart ikonları */
+
+.quality-icon {
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border: 2px solid #87451f;
+  border-radius: 50%;
+  color: #87451f;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.quality-card-include .quality-icon {
+  color: #fff3df;
+  background: #713517;
+  border-color: #713517;
+}
+
+/* Kart başlıkları */
+
+.quality-card h4 {
+  margin: 0;
+  text-align: center;
+  color: #3a180c;
+  font: 600 clamp(22px, 2.5vw, 29px)/1.25 "Playfair Display", serif;
+}
+
+.quality-rule {
+  display: block;
+  width: 70%;
+  height: 1px;
+  margin: 20px auto 24px;
+  background: linear-gradient(90deg, transparent, #a16a43, transparent);
+}
+
+/* Kart listeleri */
+
+.quality-card ul {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quality-card li {
+  position: relative;
+  padding-left: 34px;
+  color: #54301e;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Kullanılmayan içerikler */
+
+.quality-card-avoid li::before {
+  content: "×";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid #8a4826;
+  border-radius: 50%;
+  color: #8a4826;
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* Kullanılan içerikler */
+
+.quality-card-include li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff4e4;
+  background: #87451f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Dekorasyon */
+
+.quality-decoration {
+  margin-top: 24px;
+  text-align: center;
+  color: #a36d43;
+  font-size: 30px;
+}
+
+/* Alt imza */
+
+.quality-signature {
+  margin: 40px 0 0;
+  text-align: center;
+  color: #54230f;
+  font: italic clamp(24px, 3.4vw, 39px) "Playfair Display", serif;
+}
+
+.quality-disclaimer {
+  max-width: 700px;
+  margin: 22px auto 0;
+  text-align: center;
+  color: #987d68;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .ingredients {
+    width: calc(100% - 30px);
+    padding: 30px 20px;
+  }
+
+  .ing-row {
+    gap: 20px;
+  }
+
+  .ing-bags > img {
+    height: 260px;
+  }
+
+  .ing-circles {
+    gap: 15px 8px;
+  }
+
+  .ing-circle img {
+    width: clamp(75px, 11vw, 105px);
+  }
+
+  .quality-section {
+    margin-top: 55px;
+  }
+
+  .quality-grid {
+    gap: 15px;
+  }
+
+  .quality-card {
+    padding: 28px 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBİL
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  /* İçindekiler */
+
+  .ingredients {
+    width: calc(100% - 20px);
+    margin-top: 35px;
+    padding: 30px 14px 20px;
+    border-radius: 20px;
+  }
+
+  .ing-head {
+    margin-bottom: 25px;
+  }
+
+  .ing-head h2 {
+    gap: 10px;
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  .ing-line {
+    width: 13%;
+  }
+
+  .ing-head p {
+    font-size: 15px;
+  }
+
+  .ing-row {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .ing-bags > img {
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .choc-tags {
+    gap: 6px;
+  }
+
+  .choc-tags span {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .ing-circles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 8px;
+    max-width: 390px;
+    margin: 0 auto;
+  }
+
+  .ing-circle img {
+    width: min(100%, 100px);
+  }
+
+  .ing-circle figcaption {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .ing-note {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+
+  /* Lezzetin Sırrı */
+
+  .quality-section {
+    margin-top: 45px;
+    padding: 38px 15px 28px;
+    border-radius: 22px;
+  }
+
+  .quality-heading {
+    margin-bottom: 28px;
+  }
+
+  .quality-heading h3 {
+    font-size: 35px;
+  }
+
+  .quality-heading p {
+    font-size: 16px;
+  }
+
+  .quality-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .quality-card {
+    min-height: auto;
+    padding: 27px 21px;
+    border-radius: 20px;
+  }
+
+  .quality-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 29px;
+  }
+
+  .quality-card h4 {
+    font-size: 25px;
+  }
+
+  .quality-card li {
+    font-size: 14px;
+  }
+
+  .quality-card ul {
+    gap: 16px;
+  }
+
+  .quality-signature {
+    margin-top: 32px;
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+  .quality-disclaimer {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   HAREKET AZALTMA TERCİHİ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ing-circle img,
+  .quality-card,
+  .quality-card *,
+  .quality-section * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .ing-circle:hover img {
+    transform: none;
+  }
+}
+
+/* =========================================================
    LEZZETİN SIRRI — KALİTE ALANI
    ========================================================= */
 
