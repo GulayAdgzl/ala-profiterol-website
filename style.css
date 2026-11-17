@@ -1409,3 +1409,235 @@
 }
 
 
+/* =================================
+   A'LA - GOOGLE REVIEWS CAROUSEL
+================================= */
+
+#yorumlar .reviews-inner {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#yorumlar .reviews-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+#yorumlar .reviews-eyebrow {
+    display: inline-block;
+    color: #a87937;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+#yorumlar .reviews-heading h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 0 0 12px;
+    color: #30251e;
+}
+
+#yorumlar .reviews-heading p {
+    color: #777;
+    font-size: 15px;
+}
+
+#yorumlar .reviews-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    color: #777;
+    font-size: 13px;
+}
+
+#yorumlar .reviews-stars,
+#yorumlar .review-stars {
+    color: #f5a623;
+    letter-spacing: 3px;
+    font-size: 19px;
+}
+
+#yorumlar .reviews-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#yorumlar .reviews-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 40px) / 3);
+    gap: 20px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 5px 2px 15px;
+}
+
+#yorumlar .reviews-track::-webkit-scrollbar {
+    display: none;
+}
+
+#yorumlar .review-card {
+    scroll-snap-align: start;
+    background: #fff;
+    border: 1px solid #eee8e1;
+    border-radius: 18px;
+    padding: 25px;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 25px rgba(45, 30, 15, 0.045);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#yorumlar .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(45, 30, 15, 0.09);
+}
+
+#yorumlar .review-card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+#yorumlar .review-avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: #f1e6d8;
+    color: #805c37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+#yorumlar .review-card h3 {
+    font-size: 15px;
+    margin: 0 0 4px;
+    color: #33271f;
+}
+
+#yorumlar .review-source {
+    font-size: 11px;
+    color: #999;
+}
+
+#yorumlar .review-stars {
+    margin-bottom: 14px;
+}
+
+#yorumlar .review-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #625b55;
+    margin: 0;
+}
+
+#yorumlar .reviews-arrow {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #e8ded2;
+    border-radius: 50%;
+    background: #fff;
+    color: #805c37;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 16px;
+    transition: all 0.25s ease;
+}
+
+#yorumlar .reviews-arrow:hover {
+    background: #805c37;
+    color: #fff;
+}
+
+#yorumlar .reviews-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+#yorumlar .reviews-dot {
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background: #d9cec2;
+    cursor: pointer;
+    padding: 0;
+}
+
+#yorumlar .reviews-dot.active {
+    width: 22px;
+    border-radius: 10px;
+    background: #9b7043;
+}
+
+#yorumlar .reviews-google-link {
+    display: flex;
+    width: fit-content;
+    margin: 28px auto 0;
+    align-items: center;
+    gap: 8px;
+    color: #8a633c;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#yorumlar .reviews-google-link:hover {
+    color: #513720;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    #yorumlar .reviews-track {
+        grid-auto-columns: calc((100% - 20px) / 2);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #yorumlar .reviews-inner {
+        width: 92%;
+    }
+
+    #yorumlar .reviews-heading {
+        margin-bottom: 30px;
+    }
+
+    #yorumlar .reviews-carousel {
+        gap: 8px;
+    }
+
+    #yorumlar .reviews-track {
+        grid-auto-columns: 100%;
+        gap: 12px;
+    }
+
+    #yorumlar .review-card {
+        padding: 22px;
+        min-height: 250px;
+    }
+
+    #yorumlar .reviews-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+}
+
