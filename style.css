@@ -1772,3 +1772,359 @@
     }
 }
 
+/* ==========================================
+   A'LA - PREMIUM GOOGLE REVIEWS SHOWCASE
+========================================== */
+
+#yorumlar {
+    position: relative;
+    overflow: hidden;
+    padding: 85px 0 75px;
+    background:
+        radial-gradient(ellipse at 10% 10%, rgba(255,255,255,.55), transparent 40%),
+        radial-gradient(ellipse at 90% 85%, rgba(190,112,52,.13), transparent 40%),
+        linear-gradient(135deg, #f9e5d0, #fff1e2 50%, #f4d5b9);
+}
+
+#yorumlar .reviews-showcase {
+    width: 94%;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Başlık */
+
+#yorumlar .reviews-hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#yorumlar .reviews-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 18px;
+}
+
+#yorumlar .reviews-ornament span {
+    width: 100px;
+    height: 1px;
+    background: #a45c31;
+}
+
+#yorumlar .reviews-ornament p {
+    color: #91451f;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+#yorumlar .reviews-hero h2 {
+    color: #38180d;
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 5vw, 70px);
+    line-height: 1.05;
+    font-weight: 500;
+    margin: 0;
+}
+
+#yorumlar .reviews-hero h2 em {
+    display: block;
+    color: #a65b35;
+    font-weight: 400;
+}
+
+#yorumlar .reviews-subtitle {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: clamp(15px, 1.6vw, 21px);
+    color: #633b27;
+    margin: 18px 0 20px;
+}
+
+#yorumlar .reviews-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#yorumlar .reviews-divider span:not(.coffee-symbol) {
+    width: 110px;
+    height: 1px;
+    background: #ad704c;
+}
+
+#yorumlar .coffee-symbol {
+    color: #9b5734;
+    font-size: 25px;
+}
+
+/* Ana yerleşim */
+
+#yorumlar .reviews-content {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Google kartı */
+
+#yorumlar .google-review-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 28px 20px;
+    background: rgba(255,255,255,.66);
+    border: 1px solid rgba(255,255,255,.95);
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(88,45,22,.10);
+}
+
+#yorumlar .google-wordmark {
+    font-size: 36px;
+    font-weight: 600;
+    color: #4285f4;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+#yorumlar .google-wordmark span {
+    background: conic-gradient(
+        #4285f4 0deg 100deg,
+        #34a853 100deg 180deg,
+        #fbbc05 180deg 250deg,
+        #ea4335 250deg 310deg,
+        #4285f4 310deg
+    );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#yorumlar .google-card-title {
+    font-family: Georgia, serif;
+    color: #4b2515;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+#yorumlar .google-card-description {
+    font-size: 13px;
+    color: #785a48;
+    line-height: 1.7;
+    margin: 0 0 25px;
+}
+
+#yorumlar .google-review-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 12px;
+    border-radius: 40px;
+    background: #431d0e;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+#yorumlar .google-review-button:hover {
+    background: #743d22;
+    transform: translateY(-3px);
+}
+
+#yorumlar .google-g {
+    font-size: 19px;
+    font-weight: bold;
+    color: #4285f4;
+}
+
+/* Yorum kartları */
+
+#yorumlar .reviews-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    min-width: 0;
+}
+
+#yorumlar .review-showcase-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+    border-radius: 23px;
+    background: rgba(255,255,255,.68);
+    border: 1px solid rgba(255,255,255,.95);
+    box-shadow: 0 10px 25px rgba(88,45,22,.10);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+#yorumlar .review-showcase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(88,45,22,.14);
+}
+
+#yorumlar .review-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#yorumlar .review-avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #b8794e, #552713);
+    color: #fff4e7;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    box-shadow: 0 4px 10px rgba(80,40,20,.18);
+}
+
+#yorumlar .review-person h3 {
+    color: #4b2515;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+
+#yorumlar .review-person span {
+    color: #95674c;
+    font-size: 12px;
+}
+
+#yorumlar .review-showcase-stars {
+    color: #e99b20;
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+#yorumlar .review-showcase-card > p {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #4d3022;
+    margin: 0;
+}
+
+/* Alt slogan */
+
+#yorumlar .reviews-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+#yorumlar .reviews-footer span {
+    width: 100px;
+    height: 1px;
+    background: #a96d49;
+}
+
+#yorumlar .reviews-footer p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: clamp(22px, 3vw, 36px);
+    color: #743b20;
+    margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+    #yorumlar .reviews-content {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    #yorumlar .reviews-cards {
+        gap: 10px;
+    }
+
+    #yorumlar .review-showcase-card {
+        padding: 20px 14px;
+    }
+
+    #yorumlar .review-person {
+        align-items: flex-start;
+    }
+}
+
+/* Mobil */
+
+@media (max-width: 760px) {
+    #yorumlar {
+        padding: 60px 0;
+    }
+
+    #yorumlar .reviews-content {
+        grid-template-columns: 1fr;
+    }
+
+    #yorumlar .google-review-card {
+        max-width: 100%;
+        padding: 25px;
+    }
+
+    #yorumlar .reviews-cards {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 14px;
+        padding: 5px 2px 18px;
+        scrollbar-width: none;
+    }
+
+    #yorumlar .reviews-cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    #yorumlar .review-showcase-card {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+        min-height: 260px;
+        padding: 24px;
+    }
+
+    #yorumlar .reviews-ornament {
+        gap: 10px;
+    }
+
+    #yorumlar .reviews-ornament span {
+        width: 30px;
+    }
+
+    #yorumlar .reviews-ornament p {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    #yorumlar .reviews-footer {
+        gap: 12px;
+    }
+
+    #yorumlar .reviews-footer span {
+        width: 35px;
+    }
+}
+
