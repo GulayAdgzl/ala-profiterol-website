@@ -4,13 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description" content="A’lâ Profiterol & Coffee — günlük taze hazırlanan profiterol ve kahve keyfi.">
   <meta name="theme-color" content="#351307">
+
+  <meta property="og:title" content="A’lâ Profiterol & Coffee">
+  <meta property="og:description" content="Her lokmada mutluluk. Günlük taze hazırlanan profiterol ve kahve keyfi.">
+  <meta property="og:type" content="website">
+
   <title>A’lâ Profiterol & Coffee | Tatlı mutluluğun adı</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -18,598 +23,418 @@
 
 <body>
 
-<header class="site-header on-hero">
-  <a class="brand" href="#anasayfa" aria-label="A’lâ Profiterol & Coffee ana sayfa">
-    <img src="ala-logo.png" alt="A’lâ Profiterol & Coffee logosu">
-    <span>
-      <strong>A’lâ Profiterol</strong>
-      <small>& COFFEE</small>
-    </span>
-  </a>
+  <header class="site-header on-hero">
 
-  <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <a class="brand" href="#anasayfa" aria-label="A’lâ Profiterol & Coffee ana sayfa">
+      <img src="ala-logo.png" alt="A’lâ Profiterol & Coffee logosu">
+      <span>
+        <strong>A’lâ Profiterol</strong>
+        <small>& COFFEE</small>
+      </span>
+    </a>
 
-  <nav class="main-nav" aria-label="Ana menü">
-    <a class="active" href="#anasayfa">Ana Sayfa</a>
-    <a href="#cesitler">Profiterol Çeşitleri</a>
-    <a href="#icerikler">İçindekiler</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#yorumlar">Yorumlar</a>
-    <a href="#siparis">Online Sipariş</a>
-    <a href="#iletisim">İletişim</a>
-  </nav>
-</header>
+    <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
 
-<main>
+    <nav class="main-nav" aria-label="Ana menü">
+      <a class="active" href="#anasayfa">Ana Sayfa</a>
+      <a href="#cesitler">Profiterol Çeşitleri</a>
+      <a href="#icerikler">İçindekiler</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#siparis">Online Sipariş</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
 
-  <!-- ANA SAYFA / HERO -->
+  </header>
 
-  <section class="scroll-hero" id="anasayfa" aria-label="A’lâ Profiterol & Coffee">
+  <main>
 
-    <div class="sh-stage">
+    <!-- HERO / ÇİKOLATA ANİMASYONU -->
 
-      <div class="sh-glow" aria-hidden="true"></div>
+    <section class="scroll-hero" id="anasayfa" aria-label="A’lâ Profiterol & Coffee">
 
-      <canvas
-        class="sh-canvas"
-        width="960"
-        height="540"
-        role="img"
-        aria-label="Üzerine çikolata dökülen A’lâ profiterol">
-        Üzerine çikolata dökülen A’lâ profiterol
-      </canvas>
+      <div class="sh-stage">
 
-      <div class="sh-beat sh-left" data-a="-1" data-b="0.2">
-        <p class="eyebrow">Her lokmada mutluluk</p>
+        <div class="sh-glow" aria-hidden="true"></div>
 
-        <h1>Tatlı mutluluğun adı<br><em>A’lâ Profiterol.</em></h1>
+        <canvas class="sh-canvas" width="960" height="540" role="img" aria-label="Üzerine çikolata dökülen A’lâ profiterol">
+          Üzerine çikolata dökülen A’lâ profiterol
+        </canvas>
 
-        <p>
-          Günlük taze olarak hazırlanan profiterollerimiz,
-          çikolata ve kahve keyfiyle buluşuyor.
-        </p>
+        <div class="sh-beat sh-left" data-a="-1" data-b="0.2">
+          <p class="eyebrow">Her lokmada mutluluk</p>
 
-        <div class="fresh-note">
-          <span class="fresh-dot"></span>
-          Her gün taze hazırlanır
+          <h1>
+            Tatlı mutluluğun adı<br>
+            <em>A’lâ Profiterol.</em>
+          </h1>
+
+          <p>Günlük taze olarak hazırlanan profiterollerimiz, çikolata ve kahve keyfiyle buluşuyor.</p>
+
+          <div class="fresh-note">
+            <span class="fresh-dot"></span>
+            Her gün taze hazırlanır
+          </div>
         </div>
-      </div>
 
-      <div class="sh-beat sh-right" data-a="0.23" data-b="0.48">
-        <p class="eyebrow">Çikolata seçimimiz</p>
+        <div class="sh-beat sh-right" data-a="0.23" data-b="0.48">
+          <p class="eyebrow">Çikolata seçimimiz</p>
 
-        <h2>Akıp giden<br><em>çikolata keyfi.</em></h2>
+          <h2>
+            Akıp giden<br>
+            <em>çikolata keyfi.</em>
+          </h2>
 
-        <p>
-          Sütlü, beyaz ve bitter Callebaut çikolatalar,
-          taze kremayla dolu profiterolün üzerine dökülür.
-        </p>
-      </div>
-
-      <div class="sh-beat sh-left" data-a="0.52" data-b="0.77">
-        <p class="eyebrow">Özenle hazırlanır</p>
-
-        <h2>Yumuşak krema,<br><em>yoğun çikolata.</em></h2>
-
-        <p>
-          Her gün taze hazırlanan hamur,
-          her lokmada aynı lezzeti sunar.
-        </p>
-      </div>
-
-      <div class="sh-beat sh-center" data-a="0.82" data-b="2">
-        <p class="eyebrow">Canın A’lâ Profiterol mü çekti?</p>
-
-        <h2>Şimdi <em>tatmanın</em> zamanı.</h2>
-
-        <div class="sh-actions">
-          <a class="sh-btn" href="#cesitler">
-            Lezzetleri keşfet <span>→</span>
-          </a>
-
-          <a class="sh-btn sh-btn-ghost" href="#siparis">
-            Online sipariş
-          </a>
+          <p>Sütlü, beyaz ve bitter Callebaut çikolatalar, taze kremayla dolu profiterolün üzerine dökülür.</p>
         </div>
-      </div>
 
-      <div class="sh-hint" aria-hidden="true">
-        <span>Kaydır</span>
-        <i></i>
-      </div>
+        <div class="sh-beat sh-left" data-a="0.52" data-b="0.77">
+          <p class="eyebrow">Özenle hazırlanır</p>
 
-    </div>
-  </section>
+          <h2>
+            Yumuşak krema,<br>
+            <em>yoğun çikolata.</em>
+          </h2>
 
+          <p>Her gün taze hazırlanan hamur, her lokmada aynı lezzeti sunar.</p>
+        </div>
 
-  <!-- İÇİNDEKİLERİMİZ -->
+        <div class="sh-beat sh-center" data-a="0.82" data-b="2">
+          <p class="eyebrow">Canın A’lâ Profiterol mü çekti?</p>
 
-  <section class="section ingredients" id="icerikler">
+          <h2>Şimdi <em>tatmanın</em> zamanı.</h2>
 
-    <div class="ing-head">
-      <h2>
-        <i class="ing-line" aria-hidden="true"></i>
-        İçindekilerimiz
-        <i class="ing-line" aria-hidden="true"></i>
-      </h2>
+          <div class="sh-actions">
+            <a class="sh-btn" href="#cesitler">Lezzetleri keşfet <span>→</span></a>
+            <a class="sh-btn sh-btn-ghost" href="#siparis">Online sipariş</a>
+          </div>
+        </div>
 
-      <p>En kaliteli malzemelerle, gerçek lezzet...</p>
-    </div>
-
-    <div class="ing-row">
-
-      <!-- CALLEBAUT ÇİKOLATA PAKETLERİ -->
-
-      <div class="ing-bags">
-
-        <img
-          src="callebaut-paketler.webp"
-          alt="Callebaut 823 sütlü, W2 beyaz ve 811 bitter çikolata paketleri"
-          loading="lazy">
-
-        <div class="choc-tags">
-          <span>823 · Sütlü</span>
-          <span>W2 · Beyaz</span>
-          <span>811 · Bitter</span>
+        <div class="sh-hint" aria-hidden="true">
+          <span>Kaydır</span>
+          <i></i>
         </div>
 
       </div>
-
-      <!-- MALZEMELER -->
-
-      <div class="ing-circles">
-
-        <figure class="ing-circle">
-          <img src="mal-un.webp" alt="Un" loading="lazy">
-          <figcaption>Un</figcaption>
-        </figure>
-
-        <figure class="ing-circle">
-          <img src="mal-yumurta.webp" alt="Yumurta" loading="lazy">
-          <figcaption>Yumurta</figcaption>
-        </figure>
-
-        <figure class="ing-circle">
-          <img src="mal-sut.webp" alt="Süt" loading="lazy">
-          <figcaption>Süt</figcaption>
-        </figure>
-
-        <figure class="ing-circle">
-          <img src="mal-tereyagi.webp" alt="Tereyağı" loading="lazy">
-          <figcaption>Tereyağı</figcaption>
-        </figure>
-
-        <figure class="ing-circle">
-          <img src="mal-cikolata.webp" alt="Gerçek çikolata" loading="lazy">
-          <figcaption>Gerçek<br>Çikolata</figcaption>
-        </figure>
-
-        <figure class="ing-circle">
-          <img src="mal-krema.webp" alt="Taze krema" loading="lazy">
-          <figcaption>Taze Krema</figcaption>
-        </figure>
-
-      </div>
-    </div>
+    </section>
 
 
-    <!-- LEZZETİN SIRRI -->
+    <!-- İÇİNDEKİLERİMİZ -->
 
-    <section class="quality-section" aria-labelledby="quality-title">
+    <section class="section ingredients" id="icerikler">
 
-      <div class="quality-heading">
+      <div class="ing-head">
+        <h2>
+          <i class="ing-line" aria-hidden="true"></i>
+          İçindekilerimiz
+          <i class="ing-line" aria-hidden="true"></i>
+        </h2>
 
-        <span class="quality-eyebrow">A’lâ’da kalite anlayışı</span>
-
-        <h3 id="quality-title">Lezzetin Sırrı</h3>
-
-        <p>Gerçek malzemelerle, gerçek lezzet!</p>
-
+        <p>En kaliteli malzemelerle, gerçek lezzet...</p>
       </div>
 
-      <div class="quality-grid">
+      <div class="ing-row">
 
-        <!-- KULLANILMAYAN İÇERİKLER -->
+        <div class="ing-bags">
+          <img src="callebaut-paketler.webp" alt="Callebaut 823 sütlü, W2 beyaz ve 811 bitter çikolata paketleri" loading="lazy">
 
-        <article class="quality-card quality-card-avoid">
+          <div class="choc-tags">
+            <span>823 · Sütlü</span>
+            <span>W2 · Beyaz</span>
+            <span>811 · Bitter</span>
+          </div>
+        </div>
 
-          <div class="quality-icon" aria-hidden="true">✕</div>
+        <div class="ing-circles">
 
-          <h4>Ürünlerimizin hiçbirinde;</h4>
+          <figure class="ing-circle">
+            <img src="mal-un.webp" alt="Un" loading="lazy">
+            <figcaption>Un</figcaption>
+          </figure>
 
-          <span class="quality-rule" aria-hidden="true"></span>
+          <figure class="ing-circle">
+            <img src="mal-yumurta.webp" alt="Yumurta" loading="lazy">
+            <figcaption>Yumurta</figcaption>
+          </figure>
 
-          <ul>
-            <li>
-              Tatlandırıcı, glikoz, renklendirici ve koruyucu kullanılmaz.
-            </li>
+          <figure class="ing-circle">
+            <img src="mal-sut.webp" alt="Süt" loading="lazy">
+            <figcaption>Süt</figcaption>
+          </figure>
 
-            <li>
-              Trans yağ ve palm yağı kullanılmaz.
-            </li>
-          </ul>
+          <figure class="ing-circle">
+            <img src="mal-tereyagi.webp" alt="Tereyağı" loading="lazy">
+            <figcaption>Tereyağı</figcaption>
+          </figure>
 
-          <div class="quality-decoration" aria-hidden="true">✧</div>
+          <figure class="ing-circle">
+            <img src="mal-cikolata.webp" alt="Gerçek çikolata" loading="lazy">
+            <figcaption>Gerçek<br>Çikolata</figcaption>
+          </figure>
 
-        </article>
+          <figure class="ing-circle">
+            <img src="mal-krema.webp" alt="Taze krema" loading="lazy">
+            <figcaption>Taze Krema</figcaption>
+          </figure>
 
-
-        <!-- KULLANILAN İÇERİKLER -->
-
-        <article class="quality-card quality-card-include">
-
-          <div class="quality-icon" aria-hidden="true">✓</div>
-
-          <h4>Tüm ürünlerimizde;</h4>
-
-          <span class="quality-rule" aria-hidden="true"></span>
-
-          <ul>
-            <li>El yapımı çıtır hamur</li>
-
-            <li>Özenle seçilen malzemeler</li>
-
-            <li>Günlük taze üretim</li>
-
-            <li>%100 şeker pancarı şekeri</li>
-
-            <li>Özenle seçilmiş gerçek çikolata</li>
-          </ul>
-
-          <div class="quality-decoration" aria-hidden="true">✧</div>
-
-        </article>
-
+        </div>
       </div>
 
-      <p class="quality-signature">
-        Gerçek malzemelerle, gerçek lezzet!
-      </p>
-
-      <p class="quality-disclaimer">
-        Ürün içerikleri ve üretim uygulamalarına ilişkin bilgiler,
-        yayına alınmadan önce işletme tarafından teyit edilmelidir.
+      <p class="ing-note">
+        Not: Çeşitlere göre kullanım bilgileri işletme tarafından teyit edildiğinde bu açıklamalar kesinleştirilecektir.
       </p>
 
     </section>
 
 
-    <p class="ing-note">
-      Not: Çeşitlere göre kullanım bilgileri işletme tarafından
-      teyit edildiğinde bu açıklamalar kesinleştirilecektir.
-    </p>
+    <!-- PROFİTEROL ÇEŞİTLERİ -->
 
-  </section>
+    <section class="section varieties" id="cesitler">
 
+      <div class="section-heading">
+        <span class="eyebrow">Her damak zevkine</span>
+        <h2>Profiterol Çeşitlerimiz</h2>
+        <p>A’lâ’nın özenle hazırlanan çikolatalı profiterol lezzetlerini keşfet.</p>
+      </div>
 
-  <!-- PROFİTEROL ÇEŞİTLERİ -->
+      <div class="variety-grid">
 
-  <section class="section varieties" id="cesitler">
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Sütlü çikolatalı A’lâ profiterol">
+          <div>
+            <h3>Sütlü Çikolatalı</h3>
+            <p>Yumuşak iç kreması ve sütlü çikolata lezzeti.</p>
+          </div>
+        </article>
 
-    <div class="section-heading">
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Bitter çikolatalı A’lâ profiterol">
+          <div>
+            <h3>Bitter Çikolatalı</h3>
+            <p>Yoğun çikolata tadını sevenlere özel.</p>
+          </div>
+        </article>
 
-      <span class="eyebrow">Her damak zevkine</span>
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Beyaz çikolatalı A’lâ profiterol">
+          <div>
+            <h3>Beyaz Çikolatalı</h3>
+            <p>Beyaz çikolatanın kendine özgü lezzeti.</p>
+          </div>
+        </article>
 
-      <h2>Profiterol Çeşitlerimiz</h2>
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Beyaz ve sütlü çikolatalı profiterol">
+          <div>
+            <h3>Karışık Çikolatalı</h3>
+            <p>Beyaz ve sütlü çikolatanın bir araya geldiği lezzet.</p>
+          </div>
+        </article>
 
-      <p>
-        A’lâ’nın özenle hazırlanan çikolatalı profiterol
-        lezzetlerini keşfet.
-      </p>
-
-    </div>
-
-    <div class="variety-grid">
-
-      <article class="variety-card">
-        <img
-          src="profiterol-menu-referans.jpg"
-          alt="Sütlü çikolatalı A’lâ profiterol">
-
-        <div>
-          <h3>Sütlü Çikolatalı</h3>
-          <p>Yumuşak iç kreması ve sütlü çikolata lezzeti.</p>
-        </div>
-      </article>
-
-      <article class="variety-card">
-        <img
-          src="profiterol-menu-referans.jpg"
-          alt="Bitter çikolatalı A’lâ profiterol">
-
-        <div>
-          <h3>Bitter Çikolatalı</h3>
-          <p>Yoğun çikolata tadını sevenlere özel.</p>
-        </div>
-      </article>
-
-      <article class="variety-card">
-        <img
-          src="profiterol-menu-referans.jpg"
-          alt="Beyaz çikolatalı A’lâ profiterol">
-
-        <div>
-          <h3>Beyaz Çikolatalı</h3>
-          <p>Beyaz çikolatanın kendine özgü lezzeti.</p>
-        </div>
-      </article>
-
-      <article class="variety-card">
-        <img
-          src="profiterol-menu-referans.jpg"
-          alt="Beyaz ve sütlü çikolatalı profiterol">
-
-        <div>
-          <h3>Karışık Çikolatalı</h3>
-          <p>Beyaz ve sütlü çikolatanın bir araya geldiği lezzet.</p>
-        </div>
-      </article>
-
-      <article class="variety-card">
-        <img
-          src="profiterol-menu-referans.jpg"
-          alt="Karamel bisküvi soslu profiterol">
-
-        <div>
-          <h3>Karamel Bisküvi Soslu</h3>
-          <p>Karamel bisküvi sosuyla farklı bir tatlı deneyimi.</p>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="menu-note">
-      <p>
-        Gramaj ve güncel çeşit bilgileri için online menümüzü inceleyebilirsiniz.
-      </p>
-
-      <a
-        class="button button-light"
-        href="https://tgoyemek.com/restoranlar/355052#bu-restoranin-en-sevilenleri"
-        target="_blank"
-        rel="noopener noreferrer">
-        Menüyü İncele →
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- GALERİ -->
-
-  <section class="section gallery" id="galeri">
-
-    <div class="section-heading">
-
-      <span class="eyebrow">A’lâ’dan kareler</span>
-
-      <h2>Dükkânımızdan</h2>
-
-      <p>
-        Mekânımızdan ve günlük hazırlık sürecimizden görüntüler.
-      </p>
-
-    </div>
-
-    <div class="gallery-grid">
-
-      <figure class="gallery-large">
-        <img src="dukkan-ici.jpg" alt="A’lâ Profiterol & Coffee dükkân içi">
-        <figcaption>Dükkânımız</figcaption>
-      </figure>
-
-      <figure>
-        <img src="dukkan-dis-cephesi.jpg" alt="A’lâ Profiterol & Coffee dış cephe">
-        <figcaption>Bizi ziyaret edin</figcaption>
-      </figure>
-
-      <figure>
-        <img src="gunluk-hazirlik.jpg" alt="Profiterol hamurunun günlük hazırlanması">
-        <figcaption>Günlük hazırlık</figcaption>
-      </figure>
-
-      <figure>
-        <img src="callebaut-cikolatalar.jpg" alt="Kullanılan çikolatalar">
-        <figcaption>Malzemelerimiz</figcaption>
-      </figure>
-
-    </div>
-
-  </section>
-
-
-  <!-- GOOGLE YORUMLARI -->
-
-  <section class="section reviews" id="yorumlar">
-
-    <div class="section-heading">
-
-      <span class="eyebrow">Misafirlerimizin gözünden</span>
-
-      <h2>A’lâ’yı keşfedenlerin yorumları</h2>
-
-      <p>
-        Gerçek ziyaretçi değerlendirmelerini Google işletme profilimizde inceleyebilirsiniz.
-      </p>
-
-    </div>
-
-    <div class="google-review-card">
-
-      <div class="review-card-top">
-
-        <div class="google-wordmark" aria-label="Google">
-          <span>G</span>oogle
-        </div>
-
-        <span class="profile-label">
-          <span class="profile-dot"></span>
-          İşletme profili
-        </span>
+        <article class="variety-card">
+          <img src="profiterol-menu-referans.jpg" alt="Karamel bisküvi soslu profiterol">
+          <div>
+            <h3>Karamel Bisküvi Soslu</h3>
+            <p>Karamel bisküvi sosuyla farklı bir tatlı deneyimi.</p>
+          </div>
+        </article>
 
       </div>
 
-      <div class="review-profile">
+      <div class="menu-note">
+        <p>Gramaj ve güncel çeşit bilgileri için online menümüzü inceleyebilirsiniz.</p>
 
-        <div class="review-avatar" aria-hidden="true">A’lâ</div>
+        <a class="button button-light"
+           href="https://tgoyemek.com/restoranlar/355052#bu-restoranin-en-sevilenleri"
+           target="_blank"
+           rel="noopener noreferrer">
+          Menüyü İncele →
+        </a>
+      </div>
 
-        <div class="review-business">
+    </section>
 
-          <h3>A’lâ Profiterol & Coffee</h3>
 
-          <p>Profiterol · Kahve</p>
+    <!-- GALERİ -->
 
-          <div
-            class="review-stars"
-            aria-label="Google puanını ve değerlendirmeleri Google’da görüntüleyin">
+    <section class="section gallery" id="galeri">
 
-            <span>☆</span>
-            <span>☆</span>
-            <span>☆</span>
-            <span>☆</span>
-            <span>☆</span>
+      <div class="section-heading">
+        <span class="eyebrow">A’lâ’dan kareler</span>
+        <h2>Dükkânımızdan</h2>
+        <p>Mekânımızdan ve günlük hazırlık sürecimizden görüntüler.</p>
+      </div>
 
-            <small>Puan ve yorumlar Google’da</small>
+      <div class="gallery-grid">
+
+        <figure class="gallery-large">
+          <img src="dukkan-ici.jpg" alt="A’lâ Profiterol & Coffee dükkân içi">
+          <figcaption>Dükkânımız</figcaption>
+        </figure>
+
+        <figure>
+          <img src="dukkan-dis-cephesi.jpg" alt="A’lâ Profiterol & Coffee dış cephe">
+          <figcaption>Bizi ziyaret edin</figcaption>
+        </figure>
+
+        <figure>
+          <img src="gunluk-hazirlik.jpg" alt="Profiterol hamurunun günlük hazırlanması">
+          <figcaption>Günlük hazırlık</figcaption>
+        </figure>
+
+        <figure>
+          <img src="callebaut-cikolatalar.jpg" alt="Kullanılan çikolatalar">
+          <figcaption>Malzemelerimiz</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+
+    <!-- GOOGLE YORUMLARI -->
+
+    <section class="section reviews" id="yorumlar">
+
+      <div class="section-heading">
+        <span class="eyebrow">Misafirlerimizin gözünden</span>
+        <h2>A’lâ’yı keşfedenlerin yorumları</h2>
+        <p>Gerçek ziyaretçi değerlendirmelerini Google işletme profilimizde inceleyebilirsiniz.</p>
+      </div>
+
+      <div class="google-review-card">
+
+        <div class="review-card-top">
+          <div class="google-wordmark" aria-label="Google"><span>G</span>oogle</div>
+          <span class="profile-label">
+            <span class="profile-dot"></span>
+            İşletme profili
+          </span>
+        </div>
+
+        <div class="review-profile">
+
+          <div class="review-avatar" aria-hidden="true">A’lâ</div>
+
+          <div class="review-business">
+            <h3>A’lâ Profiterol & Coffee</h3>
+            <p>Profiterol · Kahve</p>
+
+            <div class="review-stars" aria-label="Google puanını ve değerlendirmeleri Google’da görüntüleyin">
+              <span>☆</span>
+              <span>☆</span>
+              <span>☆</span>
+              <span>☆</span>
+              <span>☆</span>
+              <small>Puan ve yorumlar Google’da</small>
+            </div>
 
           </div>
+        </div>
 
+        <div class="review-card-bottom">
+
+          <p>Lezzet deneyimini paylaşan misafirlerimizin değerlendirmelerine göz atın.</p>
+
+          <a class="google-review-button"
+             href="https://www.google.com/search?sca_esv=87185fd321e99336&hl=tr-TR&sxsrf=AKL5yDjA1qpeSQQWZu827t-TKatMnPN5Jg:1794577364887&q=a+la+profiterol+yorumlar%C4%B1&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXmQ80wz4wNfeL2kPlgbNSX_lcH452rQnOuSqoucSg_V0I8ft975Vib1wu97CQHUpnKCwdwQ-ZMspmJrbJJjcjif-lg2_ByrKgZ1QVdjKS2AIkMgt5Qi6v1y7ISV68te7svgfWL1Z8wUfJttG-jlbxh81rjGSSJoTgR51XbXBXKQn_9sQ&si=AE1YtOqiKPb2pdLXAi8quZ9vbH4aVq_aX8-3H9iFBLpRNK95c5p4_vXtKeXkjSDCCPrz5BiG1sjncwuzybGpkGSjx6sWJ25rVFVaY3aLbWUUgdEefc5Y2yqOpJX5uDzJzicq50rvACGRmPtH15iL6zdkK59SKBGmIQ%3D%3D&sa=X&ved=2ahUKEwidkezSiYWYAxWbhf0HHR82J6gQxKsJKAN6BAgYEAE&ictx=1&stq=1&cs=0&lei=1BP3ap3XNZuL9u8Pn-ycwQo"
+             target="_blank"
+             rel="noopener noreferrer">
+
+            <span class="google-g" aria-hidden="true">G</span>
+            Google yorumlarını gör
+            <span aria-hidden="true">↗</span>
+
+          </a>
         </div>
 
       </div>
 
-      <div class="review-card-bottom">
+      <p class="review-disclaimer">
+        Google’daki güncel puan ve yorumlar doğrudan Google üzerinde görüntülenir.
+      </p>
 
-        <p>
-          Lezzet deneyimini paylaşan misafirlerimizin
-          değerlendirmelerine göz atın.
-        </p>
+    </section>
 
-        <a
-          class="google-review-button"
-          href="https://www.google.com/search?q=a+la+profiterol+yorumlar%C4%B1"
-          target="_blank"
-          rel="noopener noreferrer">
 
-          <span class="google-g" aria-hidden="true">G</span>
-          Google yorumlarını gör
-          <span aria-hidden="true">↗</span>
+    <!-- ONLINE SİPARİŞ -->
 
+    <section class="section order" id="siparis">
+
+      <div class="order-copy">
+        <div class="order-copy"><span class="eyebrow">Canın A’lâ Profiterol mü çekti?</span>
+        <h2>Online Sipariş</h2>
+        <p>Sevdiğin lezzetlere kullandığın sipariş platformundan ulaş.</p>
+      </div>
+
+      <div class="order-links">
+
+        <a class="order-button yemek" href="#" aria-label="Yemeksepeti sipariş bağlantısı eklenecek">
+          Yemeksepeti
+          <small>Bağlantı eklenecek</small>
+        </a>
+
+        <a class="order-button trendyol"
+           href="https://tgoyemek.com/restoranlar/355052#bu-restoranin-en-sevilenleri"
+           target="_blank"
+           rel="noopener noreferrer">
+          Trendyol Go
+          <small>Siparişe git</small>
+        </a>
+
+        <a class="order-button migros" href="#" aria-label="Migros Yemek sipariş bağlantısı eklenecek">
+          MİGROS Yemek
+          <small>Bağlantı eklenecek</small>
         </a>
 
       </div>
 
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer id="iletisim">
+
+    <div class="footer-brand">
+      <img src="ala-logo.png" alt="A’lâ Profiterol & Coffee logosu">
+      <span>
+        A’lâ Profiterol
+        <small>& COFFEE</small>
+      </span>
     </div>
 
-    <p class="review-disclaimer">
-      Google’daki güncel puan ve yorumlar doğrudan Google üzerinde görüntülenir.
-    </p>
+    <p>Her lokmada mutluluk ♡</p>
 
-  </section>
+    <div class="footer-info">
 
+      <span>
+        📍 Adres<br>
+        <b>İşletme adresi eklenecek</b>
+      </span>
 
-  <!-- ONLINE SİPARİŞ -->
+      <span>
+        ◷ Çalışma saatleri<br>
+        <b>Güncel saatler eklenecek</b>
+      </span>
 
-  <section class="section order" id="siparis">
-
-    <div class="order-copy">
-
-      <span class="eyebrow">Canın A’lâ Profiterol mü çekti?</span>
-
-      <h2>Online Sipariş</h2>
-
-      <p>
-        Sevdiğin lezzetlere kullandığın sipariş platformundan ulaş.
-      </p>
-
-    </div>
-
-    <div class="order-links">
-
-      <a
-        class="order-button yemek"
-        href="#"
-        aria-label="Yemeksepeti sipariş bağlantısı eklenecek">
-
-        Yemeksepeti
-        <small>Bağlantı eklenecek</small>
-
-      </a>
-
-      <a
-        class="order-button trendyol"
-        href="https://tgoyemek.com/restoranlar/355052#bu-restoranin-en-sevilenleri"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        Trendyol Go
-        <small>Siparişe git</small>
-
-      </a>
-
-      <a
-        class="order-button migros"
-        href="#"
-        aria-label="Migros Yemek sipariş bağlantısı eklenecek">
-
-        MİGROS Yemek
-        <small>Bağlantı eklenecek</small>
-
+      <a href="https://www.instagram.com/alaprofiterolcoffee/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Instagram ↗
       </a>
 
     </div>
 
-  </section>
+    <small class="copyright">
+      © <span id="year"></span> A’lâ Profiterol & Coffee. Tüm hakları saklıdır.
+    </small>
 
-</main>
+  </footer>
 
-
-<!-- FOOTER -->
-
-<footer id="iletisim">
-
-  <div class="footer-brand">
-
-    <img src="ala-logo.png" alt="A’lâ Profiterol & Coffee logosu">
-
-    <span>
-      A’lâ Profiterol
-      <small>& COFFEE</small>
-    </span>
-
-  </div>
-
-  <p>Her lokmada mutluluk ♡</p>
-
-  <div class="footer-info">
-
-    <span>
-      📍 Adres<br>
-      <b>İşletme adresi eklenecek</b>
-    </span>
-
-    <span>
-      ◷ Çalışma saatleri<br>
-      <b>Güncel saatler eklenecek</b>
-    </span>
-
-    <a
-      href="https://www.instagram.com/alaprofiterolcoffee/"
-      target="_blank"
-      rel="noopener noreferrer">
-      Instagram ↗
-    </a>
-
-  </div>
-
-  <small class="copyright">
-    © <span id="year"></span> A’lâ Profiterol & Coffee. Tüm hakları saklıdır.
-  </small>
-
-</footer>
-
-
-<script src="script.js"></script>
-<script src="hero-scroll.js"></script>
+  <script src="script.js"></script>
+  <script src="hero-scroll.js"></script>
 
 </body>
 </html>
