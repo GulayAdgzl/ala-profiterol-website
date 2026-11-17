@@ -303,3 +303,84 @@ if (chocoDrip) {
   sheet.onerror = startStatic;
   sheet.src = FLOW.src;
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector("#yorumlar");
+
+    if (!section) return;
+
+    const track = section.querySelector(".reviews-track");
+    const prev = section.querySelector(".reviews-prev");
+    const next = section.querySelector(".reviews-next");
+    const dotsContainer = section.querySelector(".reviews-dots");
+    const cards = [...section.querySelectorAll(".review-card")];
+
+    if (!track || !cards.length) return;
+
+    let currentIndex = 0;
+
+    cards.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.className = "reviews-dot";
+        dot.setAttribute("aria-label", `${index + 1}. yoruma git`);
+
+        dot.addEventListener("click", () => {
+            currentIndex = index;
+            scrollToCard(index);
+        });
+
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = [...dotsContainer.children];
+
+    function scrollToCard(index) {
+        track.scrollTo({
+            left: cards[index].offsetLeft - cards[0].offsetLeft,
+            behavior: "smooth"
+        });
+
+        updateDots(index);
+    }
+
+    function updateDots(index) {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+        });
+    }
+
+    function getCardWidth() {
+        return cards[0].offsetWidth +
+            parseFloat(getComputedStyle(track).columnGap || 0);
+    }
+
+    function updateCurrentIndex() {
+        currentIndex = Math.round(
+            track.scrollLeft / getCardWidth()
+        );
+
+        currentIndex = Math.max(
+            0,
+            Math.min(currentIndex, cards.length - 1)
+        );
+
+        updateDots(currentIndex);
+    }
+
+    prev.addEventListener("click", () => {
+        currentIndex = Math.max(0, currentIndex - 1);
+        scrollToCard(currentIndex);
+    });
+
+    next.addEventListener("click", () => {
+        currentIndex = Math.min(cards.length - 1, currentIndex + 1);
+        scrollToCard(currentIndex);
+    });
+
+    track.addEventListener("scroll", updateCurrentIndex);
+
+    updateDots(0);
+});
+
