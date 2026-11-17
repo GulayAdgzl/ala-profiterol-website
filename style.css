@@ -853,3 +853,131 @@
     white-space: normal;
   }
 }
+
+
+/* =========================================
+   A'LA - ICERIKLER ALANI DUZENLEME
+   Masaustu: yan yana
+   Mobil: alt alta
+========================================= */
+
+#icerikler .quality-intro {
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto 45px !important;
+  text-align: center !important;
+}
+
+#icerikler .quality-ingredients {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 45px !important;
+  width: 100% !important;
+  max-width: 1150px !important;
+  margin: 0 auto !important;
+}
+
+#icerikler .quality-chocolate {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+#icerikler .quality-chocolate-image {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+#icerikler .quality-chocolate-image img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 290px !important;
+  max-height: 290px !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+}
+
+#icerikler .quality-chocolate-caption {
+  text-align: center !important;
+}
+
+#icerikler .quality-materials {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 25px 15px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+#icerikler .quality-material {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  text-align: center !important;
+}
+
+#icerikler .quality-material img {
+  display: block !important;
+  width: 105px !important;
+  max-width: 100% !important;
+  height: 105px !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+}
+
+#icerikler .quality-cards {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  max-width: 1080px !important;
+  margin: 0 auto !important;
+}
+
+#icerikler .quality-signature {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* TABLET VE MOBIL */
+@media (max-width: 760px) {
+  #icerikler .quality-ingredients {
+    grid-template-columns: 1fr !important;
+    gap: 35px !important;
+    max-width: 540px !important;
+  }
+
+  #icerikler .quality-chocolate-image img {
+    height: 240px !important;
+    max-height: 240px !important;
+  }
+
+  #icerikler .quality-materials {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  #icerikler .quality-material img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  #icerikler .quality-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 420px) {
+  #icerikler .quality-material img {
+    width: 76px !important;
+    height: 76px !important;
+  }
+
+  #icerikler .quality-material {
+    font-size: 12px !important;
+  }
+}
+
