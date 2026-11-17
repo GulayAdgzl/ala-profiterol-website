@@ -557,3 +557,62 @@
     font-size: 12px !important;
   }
 }
+
+
+/* =========================================
+   İÇİNDEKİLER — MASAÜSTÜ YERLEŞİMİ
+========================================= */
+
+@media (min-width: 761px) {
+  #icerikler .quality-ingredients {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 45px !important;
+  }
+}
+
+/* =========================================
+   YORUMLAR — YAN YANA YERLEŞİM
+========================================= */
+
+.reviews-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.5fr);
+  align-items: stretch;
+  gap: 35px;
+}
+
+.google-summary {
+  min-width: 0;
+}
+
+.review-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.review-highlight {
+  min-width: 0;
+}
+
+/* Tablet ve mobil */
+@media (max-width: 760px) {
+  .reviews-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .review-highlights {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
