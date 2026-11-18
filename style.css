@@ -2170,41 +2170,7 @@
 /* HERO MOBİL KAYDIR ALANI DÜZENLEMESİ */
 
 @media (max-width: 600px) {
-
-    .scroll-hero .sh-left {
-        padding-bottom: 20px;
-    }
-
-    .scroll-hero .fresh-note {
-        margin-bottom: 25px;
-    }
-
     .scroll-hero .sh-hint {
-        position: relative !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 10px !important;
-        margin: 22px auto 0 !important;
-        padding-bottom: 12px !important;
-        width: 100% !important;
-        z-index: 5;
-    }
-
-    .scroll-hero .sh-hint span {
-        display: block;
-        position: static !important;
-        margin: 0 !important;
-        line-height: 1.5 !important;
-    }
-
-    .scroll-hero .sh-hint i {
-        display: block !important;
-        position: relative !important;
-        width: 1px !important;
-        height: 48px !important;
-        margin: 0 auto !important;
-        overflow: hidden !important;
+        transform: translateY(30px);
     }
 }
