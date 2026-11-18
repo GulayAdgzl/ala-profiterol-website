@@ -2169,8 +2169,27 @@
 
 /* HERO MOBİL KAYDIR ALANI DÜZENLEMESİ */
 
-@media (max-width: 600px) {
+/* MOBİL - KAYDIR ALANI KONUMU */
+
+@media (max-width: 650px) {
     .scroll-hero .sh-hint {
-        transform: translateY(30px);
+        position: absolute !important;
+        left: 50% !important;
+        bottom: 0 !important;
+        top: auto !important;
+        transform: translateX(-50%) !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+
+        width: max-content !important;
+        z-index: 10 !important;
+    }
+
+    .scroll-hero .sh-hint i {
+        height: 45px !important;
+        margin: 0 !important;
     }
 }
