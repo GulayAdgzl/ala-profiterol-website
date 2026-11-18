@@ -2548,3 +2548,486 @@
         gap: 10px;
     }
 }
+
+
+
+
+/* =========================================
+   A'LA QUALITY SECTION - NEW DESIGN
+========================================= */
+
+#icerikler {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 65px;
+  background:
+    radial-gradient(ellipse at 15% 15%, #fff0df 0, transparent 40%),
+    linear-gradient(145deg, #f9dfc8, #f5d3b8);
+  color: #351307;
+}
+
+/* ÜST ALAN */
+
+#icerikler .quality-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 390px;
+  gap: 35px;
+  padding: 55px max(5vw, 35px);
+}
+
+#icerikler .quality-hero-copy {
+  max-width: 570px;
+  position: relative;
+  z-index: 2;
+}
+
+#icerikler .quality-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 25px;
+  color: #783b1c;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+#icerikler .quality-brand span {
+  width: 55px;
+  height: 1px;
+  background: #8d4c2b;
+}
+
+#icerikler .quality-hero-copy h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5.2vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: #351307;
+}
+
+#icerikler .quality-hero-copy h2 em {
+  color: #a34e20;
+}
+
+#icerikler .quality-hero-copy > p {
+  margin-top: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(16px, 2vw, 23px);
+  font-style: italic;
+  color: #75432a;
+}
+
+#icerikler .quality-hero-image {
+  height: 340px;
+  overflow: hidden;
+  border-radius: 5px 5px 100px 5px;
+  box-shadow: 0 20px 45px rgba(68, 29, 12, .18);
+}
+
+#icerikler .quality-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* KULLANMADIKLARIMIZ - ÇİKOLATA ALANI */
+
+#icerikler .quality-avoid-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 30px 48px;
+  color: #fff0dc;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, rgba(112, 49, 17, .35), transparent 70%),
+    linear-gradient(135deg, #351004, #4b1b08 50%, #2c0c03);
+  border-top: 5px solid #a85b2b;
+  border-bottom: 5px solid #a85b2b;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .28);
+}
+
+#icerikler .quality-avoid-panel::before,
+#icerikler .quality-avoid-panel::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border: 2px solid rgba(220, 151, 91, .3);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#icerikler .quality-avoid-panel::before {
+  left: -110px;
+  top: -90px;
+  box-shadow: 0 0 0 12px rgba(220, 151, 91, .06);
+}
+
+#icerikler .quality-avoid-panel::after {
+  right: -110px;
+  bottom: -100px;
+  box-shadow: 0 0 0 12px rgba(220, 151, 91, .06);
+}
+
+#icerikler .quality-panel-heading {
+  position: relative;
+  z-index: 1;
+}
+
+#icerikler .quality-panel-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #e7c59e;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+#icerikler .quality-panel-eyebrow span {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4a16b);
+}
+
+#icerikler .quality-panel-eyebrow span:last-child {
+  transform: rotate(180deg);
+}
+
+#icerikler .quality-panel-heading h3 {
+  margin: 18px 0 8px;
+  color: #fff0dc;
+  font: 500 clamp(28px, 4vw, 48px)/1.2 "Playfair Display", serif;
+}
+
+#icerikler .quality-panel-heading h3 em {
+  color: #e6b77f;
+}
+
+#icerikler .quality-panel-heading p {
+  margin: 0;
+  color: #ead4bd;
+  font: italic clamp(15px, 1.8vw, 21px) "Playfair Display", serif;
+}
+
+/* ÜÇ MADDE */
+
+#icerikler .quality-avoid-items {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1050px;
+  margin: 30px auto 0;
+  gap: 30px;
+}
+
+#icerikler .quality-avoid-item {
+  text-align: center;
+  color: #fff0dc;
+}
+
+#icerikler .quality-avoid-icon {
+  width: 105px;
+  height: 105px;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #e5ad6e;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 5px rgba(229, 173, 110, .08);
+  color: #f0bd7e;
+}
+
+#icerikler .quality-avoid-icon span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+#icerikler .quality-avoid-item h4 {
+  margin: 0;
+  font: 600 19px "Playfair Display", serif;
+  color: #fff0dc;
+}
+
+#icerikler .quality-avoid-item p {
+  margin: 5px 0 0;
+  color: #dfbd9b;
+  font-size: 14px;
+}
+
+/* TERCİH ETTİKLERİMİZ */
+
+#icerikler .quality-preferences {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 42px 35px 10px;
+}
+
+#icerikler .quality-preferences-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 32px;
+}
+
+#icerikler .quality-preferences-heading > span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #a85b2b);
+}
+
+#icerikler .quality-preferences-heading > span:last-child {
+  transform: rotate(180deg);
+}
+
+#icerikler .quality-preferences-heading h3 {
+  margin: 0;
+  text-align: center;
+  color: #421909;
+  font: 500 clamp(25px, 3.5vw, 42px) "Playfair Display", serif;
+  white-space: nowrap;
+}
+
+#icerikler .quality-preferences-heading h3 em {
+  color: #a34e20;
+}
+
+/* BEŞLİ GÖRSEL LİSTE */
+
+#icerikler .quality-preference-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+#icerikler .quality-preference {
+  text-align: center;
+  min-width: 0;
+}
+
+#icerikler .quality-preference-image {
+  width: clamp(125px, 14vw, 175px);
+  aspect-ratio: 1;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border: 2px solid #bd722f;
+  border-radius: 50%;
+  padding: 5px;
+  background: #fff0df;
+  box-shadow: 0 8px 22px rgba(78, 36, 14, .13);
+}
+
+#icerikler .quality-preference-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#icerikler .quality-preference h4 {
+  margin: 0;
+  color: #421909;
+  font: 600 clamp(14px, 1.4vw, 18px)/1.35 "Playfair Display", serif;
+}
+
+#icerikler .quality-icon-image {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle, #8d4c27, #4a1d0b);
+  color: #f6d09c;
+}
+
+#icerikler .quality-icon-image span {
+  font-size: 55px;
+}
+
+/* ALT İMZA */
+
+#icerikler .quality-signature {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  max-width: 850px;
+  margin: 45px auto 0;
+  padding: 0 25px;
+}
+
+#icerikler .quality-signature span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #a85b2b);
+}
+
+#icerikler .quality-signature span:last-child {
+  transform: rotate(180deg);
+}
+
+#icerikler .quality-signature p {
+  margin: 0;
+  color: #682b12;
+  font: italic clamp(23px, 3vw, 38px) "Great Vibes", cursive;
+  white-space: nowrap;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  #icerikler .quality-hero {
+    min-height: 320px;
+    gap: 22px;
+    padding: 45px 28px;
+  }
+
+  #icerikler .quality-hero-image {
+    height: 280px;
+  }
+
+  #icerikler .quality-preference-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 30px;
+  }
+}
+
+/* MOBİL */
+
+@media (max-width: 650px) {
+  #icerikler {
+    padding-bottom: 45px;
+  }
+
+  #icerikler .quality-hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 40px 22px 32px;
+  }
+
+  #icerikler .quality-brand {
+    font-size: 12px;
+    gap: 9px;
+    letter-spacing: 1px;
+  }
+
+  #icerikler .quality-brand span {
+    width: 28px;
+  }
+
+  #icerikler .quality-hero-copy h2 {
+    font-size: clamp(39px, 10vw, 55px);
+    letter-spacing: -1.5px;
+  }
+
+  #icerikler .quality-hero-copy > p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  #icerikler .quality-hero-image {
+    height: 245px;
+    border-radius: 5px 5px 65px 5px;
+  }
+
+  #icerikler .quality-avoid-panel {
+    padding: 35px 18px 38px;
+  }
+
+  #icerikler .quality-panel-eyebrow {
+    gap: 9px;
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  #icerikler .quality-panel-eyebrow span {
+    width: 35px;
+  }
+
+  #icerikler .quality-panel-heading h3 {
+    font-size: 29px;
+  }
+
+  #icerikler .quality-panel-heading p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  #icerikler .quality-avoid-items {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 28px;
+  }
+
+  #icerikler .quality-avoid-icon {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 10px;
+  }
+
+  #icerikler .quality-avoid-icon span {
+    font-size: 39px;
+  }
+
+  #icerikler .quality-avoid-item h4 {
+    font-size: 17px;
+  }
+
+  #icerikler .quality-preferences {
+    padding: 35px 18px 5px;
+  }
+
+  #icerikler .quality-preferences-heading {
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  #icerikler .quality-preferences-heading h3 {
+    font-size: clamp(20px, 5.5vw, 27px);
+    white-space: normal;
+  }
+
+  #icerikler .quality-preference-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 12px;
+  }
+
+  #icerikler .quality-preference-image {
+    width: min(100%, 135px);
+    margin-bottom: 10px;
+  }
+
+  #icerikler .quality-preference h4 {
+    font-size: 14px;
+  }
+
+  #icerikler .quality-signature {
+    gap: 10px;
+    margin-top: 35px;
+    padding: 0 15px;
+  }
+
+  #icerikler .quality-signature p {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  #icerikler .quality-preference-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #icerikler .quality-preference h4 {
+    font-size: 13px;
+  }
+}
