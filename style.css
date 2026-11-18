@@ -2229,3 +2229,322 @@
         margin: 0 !important;
     }
 }
+
+/* =========================================
+   A'LA - PREMIUM QUALITY CARDS
+========================================= */
+
+#icerikler .quality-heading {
+    margin: 48px auto 32px;
+    text-align: center;
+}
+
+#icerikler .quality-heading .quality-eyebrow {
+    display: block;
+    margin-bottom: 12px;
+    color: #95502d;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+#icerikler .quality-heading h2 {
+    font-size: clamp(36px, 4.5vw, 55px);
+    color: #351709;
+}
+
+#icerikler .quality-heading h2 em {
+    color: #a0522c;
+}
+
+#icerikler .quality-heading p {
+    color: #79533b;
+}
+
+/* Kartların yerleşimi */
+
+#icerikler .quality-cards {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+    max-width: 1120px !important;
+    margin: 0 auto !important;
+    align-items: stretch;
+}
+
+/* Ortak kart özellikleri */
+
+#icerikler .quality-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(25px, 3vw, 40px);
+    border-radius: 24px;
+    min-width: 0;
+    box-shadow: 0 18px 45px rgba(66, 29, 12, .12);
+}
+
+/* Sol - Kullanmadıklarımız */
+
+#icerikler .quality-card-avoid {
+    color: #fff0dc;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(181, 105, 54, .22),
+            transparent 38%
+        ),
+        linear-gradient(145deg, #351307, #4b1d0c 55%, #260b04);
+    border: 1px solid rgba(218, 164, 104, .45);
+}
+
+#icerikler .quality-card-avoid::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -110px;
+    bottom: -120px;
+    border: 1px solid rgba(237, 190, 133, .16);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 18px rgba(237, 190, 133, .035),
+        0 0 0 38px rgba(237, 190, 133, .025);
+    pointer-events: none;
+}
+
+/* Sağ - Tercihlerimiz */
+
+#icerikler .quality-card-good {
+    color: #48200e;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 255, 255, .85),
+            transparent 40%
+        ),
+        linear-gradient(145deg, #fff8ee, #f4dfca);
+    border: 1px solid rgba(166, 102, 57, .28);
+}
+
+/* Kart üst etiketi */
+
+#icerikler .quality-card-kicker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    color: #d9ae7d;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+#icerikler .quality-card-good .quality-card-kicker {
+    color: #a16b43;
+}
+
+#icerikler .quality-card-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(229, 187, 139, .5);
+}
+
+/* Başlık */
+
+#icerikler .quality-card-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(235, 198, 159, .25);
+}
+
+#icerikler .quality-card-good .quality-card-title {
+    border-bottom-color: rgba(135, 83, 45, .2);
+}
+
+#icerikler .quality-card-title h3 {
+    margin: 0;
+    color: #fff1df;
+    font: 600 clamp(19px, 2.2vw, 27px)/1.3
+          "Playfair Display", serif;
+}
+
+#icerikler .quality-card-good .quality-card-title h3 {
+    color: #48200e;
+}
+
+/* Daire içindeki işaretler */
+
+#icerikler .quality-card .quality-symbol {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #e5b77f;
+    border-radius: 50%;
+    color: #f0c38f;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+#icerikler .quality-card-good .quality-symbol {
+    background: #6a3218;
+    border-color: #6a3218;
+    color: #fff1df;
+    font-size: 24px;
+}
+
+/* Açıklama */
+
+#icerikler .quality-card-description {
+    margin: 20px 0 24px;
+    color: #dfc2a4;
+    font: italic 15px/1.6 "Playfair Display", serif;
+}
+
+#icerikler .quality-card-good .quality-card-description {
+    color: #86634b;
+}
+
+/* Liste */
+
+#icerikler .quality-card ul {
+    display: grid;
+    gap: 19px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#icerikler .quality-card li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff0df;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#icerikler .quality-card-good li {
+    color: #59331e;
+}
+
+#icerikler .quality-card li > span {
+    flex: 0 0 27px;
+    width: 27px;
+    height: 27px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #e0b77f;
+    border-radius: 50%;
+    color: #f0c38f;
+    background: transparent;
+    font-size: 16px;
+}
+
+#icerikler .quality-card-good li > span {
+    background: #6a3218;
+    border-color: #6a3218;
+    color: #fff0dc;
+}
+
+#icerikler .quality-card li strong {
+    display: block;
+    font-weight: 600;
+}
+
+#icerikler .quality-card li small {
+    display: block;
+    color: #d2ad8b;
+    font-size: 12px;
+}
+
+#icerikler .quality-card-good li small {
+    color: #896c55;
+}
+
+/* Alt mesaj */
+
+#icerikler .quality-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 25px;
+    color: #e6bd8d;
+    font: italic 14px "Playfair Display", serif;
+}
+
+#icerikler .quality-card-good .quality-card-footer {
+    color: #8b5735;
+}
+
+#icerikler .quality-card-footer span {
+    font-size: 19px;
+}
+
+/* Alt imza */
+
+#icerikler .quality-signature {
+    max-width: 950px;
+    margin: 42px auto 0;
+    gap: 22px;
+}
+
+#icerikler .quality-signature p {
+    color: #793b1d;
+    font: italic clamp(21px, 3vw, 34px)
+          "Great Vibes", cursive;
+}
+
+/* Tablet */
+
+@media (max-width: 760px) {
+    #icerikler .quality-cards {
+        grid-template-columns: 1fr !important;
+        max-width: 560px !important;
+        gap: 18px !important;
+    }
+
+    #icerikler .quality-card {
+        padding: 27px;
+    }
+}
+
+/* Küçük mobil */
+
+@media (max-width: 420px) {
+    #icerikler .quality-heading {
+        margin-top: 35px;
+    }
+
+    #icerikler .quality-card {
+        padding: 23px 19px;
+        border-radius: 19px;
+    }
+
+    #icerikler .quality-card-title {
+        gap: 12px;
+    }
+
+    #icerikler .quality-card-title h3 {
+        font-size: 19px;
+    }
+
+    #icerikler .quality-card-kicker {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    #icerikler .quality-card li {
+        font-size: 13px;
+    }
+
+    #icerikler .quality-signature {
+        gap: 10px;
+    }
+}
