@@ -2193,3 +2193,314 @@
         margin: 0 !important;
     }
 }
+//yeni eledim
+
+
+/* =====================================
+   LEZZETİN SIRRI – QUALITY CARDS
+   Yalnızca bu bölüme uygulanır
+===================================== */
+
+.quality-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    max-width: 700px;
+    margin: 55px auto 35px;
+}
+
+.quality-divider span {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #a96a43);
+}
+
+.quality-divider span:last-child {
+    background: linear-gradient(90deg, #a96a43, transparent);
+}
+
+.quality-divider-icon {
+    color: #8b431f;
+    font-size: 25px;
+}
+
+.quality-heading {
+    text-align: center;
+    margin: 0 auto 38px;
+}
+
+.quality-eyebrow {
+    display: block;
+    color: #91451f;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+.quality-heading h2 {
+    color: #351509;
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.quality-heading h2 em {
+    color: #a6532b;
+}
+
+.quality-heading p {
+    color: #80543e;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-style: italic;
+    margin-top: 12px;
+}
+
+/* Kartların yerleşimi */
+
+.quality-cards {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.quality-card {
+    position: relative;
+    overflow: hidden;
+    padding: 34px 36px 28px;
+    border-radius: 25px;
+    background: rgba(255, 248, 238, 0.78);
+    border: 1px solid rgba(137, 75, 40, 0.24);
+    box-shadow: 0 14px 35px rgba(86, 43, 20, 0.09);
+}
+
+.quality-card-kicker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #98512d;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.quality-card-line {
+    height: 1px;
+    flex: 1;
+    background: #d9b99e;
+}
+
+.quality-card-title {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e6cbb4;
+}
+
+.quality-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #793b20;
+    border-radius: 50%;
+    color: #793b20;
+    font-size: 25px;
+}
+
+.quality-card-good .quality-symbol {
+    color: #fff6e9;
+    background: #713719;
+}
+
+.quality-card-title h3 {
+    color: #48200f;
+    font-family: Georgia, serif;
+    font-size: clamp(20px, 2vw, 26px);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.quality-card-description {
+    color: #77513d;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.quality-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quality-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #56301d;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.quality-card ul li > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #914b29;
+    border-radius: 50%;
+    color: #914b29;
+    font-size: 13px;
+}
+
+.quality-card-good ul li > span {
+    color: white;
+    background: #793b20;
+    border-color: #793b20;
+}
+
+.quality-card ul li strong {
+    font-weight: 700;
+}
+
+.quality-card ul li small {
+    display: block;
+    color: #906b53;
+    font-size: 12px;
+}
+
+.quality-card-footer {
+    margin-top: 25px;
+    color: #98512d;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.quality-card-footer span {
+    margin-right: 7px;
+    color: #a75c30;
+}
+
+.quality-signature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    width: min(900px, 85%);
+    margin: 42px auto 20px;
+}
+
+.quality-signature span {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #a96a43);
+}
+
+.quality-signature span:last-child {
+    background: linear-gradient(90deg, #a96a43, transparent);
+}
+
+.quality-signature p {
+    color: #713719;
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 3vw, 34px);
+    font-style: italic;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* Mobil */
+
+@media (max-width: 760px) {
+    .quality-divider {
+        width: 85%;
+        margin: 38px auto 25px;
+    }
+
+    .quality-heading {
+        padding: 0 18px;
+        margin-bottom: 28px;
+    }
+
+    .quality-eyebrow {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .quality-heading h2 {
+        font-size: 36px;
+    }
+
+    .quality-heading p {
+        font-size: 16px;
+    }
+
+    .quality-cards {
+        width: calc(100% - 32px);
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .quality-card {
+        padding: 27px 23px 24px;
+        border-radius: 21px;
+    }
+
+    .quality-card-kicker {
+        font-size: 9px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+
+    .quality-card-title {
+        gap: 13px;
+    }
+
+    .quality-symbol {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .quality-card-title h3 {
+        font-size: 23px;
+    }
+
+    .quality-card-description {
+        font-size: 13px;
+    }
+
+    .quality-card ul {
+        gap: 16px;
+    }
+
+    .quality-card ul li {
+        font-size: 13px;
+    }
+
+    .quality-signature {
+        gap: 12px;
+        margin: 32px auto 15px;
+    }
+
+    .quality-signature p {
+        font-size: 20px;
+    }
+}
