@@ -2129,12 +2129,11 @@
 }
 
 
+/* HERO - KAYDIR IŞIK ANİMASYONU */
 
-/* Scroll indicator - ışık animasyonu */
-
-.scroll-line {
-    position: relative;
+.scroll-hero .sh-hint i {
     display: block;
+    position: relative;
     width: 1px;
     height: 45px;
     margin: 12px auto 0;
@@ -2142,7 +2141,7 @@
     overflow: hidden;
 }
 
-.scroll-line::after {
+.scroll-hero .sh-hint i::after {
     content: "";
     position: absolute;
     top: -100%;
@@ -2150,23 +2149,20 @@
     width: 100%;
     height: 100%;
     background: #fff;
-    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.8);
-    animation: scrollLight 1.8s ease-in-out infinite;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+    animation: heroScrollLight 1.7s ease-in-out infinite;
 }
 
-@keyframes scrollLight {
+@keyframes heroScrollLight {
     0% {
         top: -100%;
         opacity: 0;
     }
-
     30% {
         opacity: 1;
     }
-
     100% {
         top: 100%;
         opacity: 0;
     }
 }
-
