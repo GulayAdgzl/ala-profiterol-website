@@ -2534,7 +2534,7 @@
             rgba(49, 15, 5, 0.20),
             rgba(49, 15, 5, 0.20)
         ),
-        url("assets/chocolate-panel.png") center / cover no-repeat;
+        url("./chocolate-panel.webp") center / cover no-repeat;
     border: 1px solid #bd7937;
     box-shadow: 0 14px 32px rgba(74, 31, 12, 0.16);
 }
