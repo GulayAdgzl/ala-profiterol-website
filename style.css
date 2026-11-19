@@ -3473,22 +3473,51 @@
     #icerikler .quality-preference:nth-child(5):hover img {
         transform: scale(1.12);
     }
-}
-/* =====================================================
-   KALİTE KARTLARI – 2. DÜZELTME (en sona ekleyin)
+}/* =====================================================
+   KALİTE KARTLARI – NİHAİ DÜZELTME (en sona ekleyin)
+   Önceki "DÜZELTME" bloklarını silin, sadece bunu bırakın
 ===================================================== */
 
-/* 1) SOL KART: ikonlar kesilmesin, tamamı görünsün */
+/* 1) SOL KART: ikonlar */
 #icerikler .quality-card-avoid ul li > span {
-    width: 110px !important;
-    height: 90px !important;
-    min-width: 110px !important;
-    background-size: contain !important;   /* 150% kesiyordu; contain görseli bütün gösterir */
+    flex: 0 0 auto !important;
+    width: 120px !important;
+    height: 120px !important;
+    min-width: 120px !important;
+    background-size: 230% !important;   /* küçük kalırsa 260%, taşarsa 200% yapın */
     background-position: center !important;
     background-repeat: no-repeat !important;
 }
 
-/* 2) SAĞ KART: çikolata biraz küçülsün, kenarları yumuşasın */
+/* 2) SAĞ KART: tikler (görsel yerine saf CSS, tam ortalı) */
+#icerikler .quality-card-good ul li > span {
+    position: relative !important;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    flex: 0 0 38px !important;
+    border-radius: 50% !important;
+    border: 0 !important;
+    background-image: none !important;
+    background-color: #713719 !important;
+    box-shadow: 0 0 0 4px rgba(113, 55, 25, .1);
+    font-size: 0 !important;
+    color: transparent !important;
+}
+
+#icerikler .quality-card-good ul li > span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    width: 8px;
+    height: 15px;
+    border: solid #fff6ea;
+    border-width: 0 2.5px 2.5px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* 3) SAĞ KART: çikolata */
 #icerikler .quality-card-good::after {
     width: 260px !important;
     height: 240px !important;
@@ -3496,31 +3525,28 @@
     bottom: 0 !important;
     opacity: 1 !important;
     mix-blend-mode: multiply;
-    /* dikdörtgen kenar çizgisini eritir */
     -webkit-mask-image: radial-gradient(ellipse 70% 70% at 58% 60%, #000 55%, transparent 100%);
             mask-image: radial-gradient(ellipse 70% 70% at 58% 60%, #000 55%, transparent 100%);
-}
-
-/* 3) "Her detayında özen" yazısı sola yaslansın, çikolatanın altına girmesin */
-#icerikler .quality-card-good .quality-card-footer {
-    justify-content: flex-start !important;
-    max-width: 52%;
-    margin-left: 4px;
 }
 
 #icerikler .quality-card-good ul {
     max-width: 55% !important;
 }
 
+#icerikler .quality-card-good .quality-card-footer {
+    justify-content: flex-start !important;
+    max-width: 52%;
+    margin-left: 4px;
+}
+
 /* MOBİL */
 @media (max-width: 760px) {
     #icerikler .quality-card-avoid ul li > span {
-        width: 80px !important;
-        height: 68px !important;
-        min-width: 80px !important;
+        width: 84px !important;
+        height: 84px !important;
+        min-width: 84px !important;
     }
 
-    /* çikolata altta, yazılar üstte kalsın */
     #icerikler .quality-card-good {
         padding-bottom: 175px !important;
     }
