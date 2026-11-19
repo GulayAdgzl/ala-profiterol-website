@@ -3030,3 +3030,116 @@
         gap: 12px;
     }
 }
+
+/* ==========================================
+   KALİTE KARTLARI - REFERANS TASARIM
+   Yalnızca Lezzetin Sırrı bölümünü etkiler
+   ========================================== */
+
+.quality-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Kartların genel yapısı */
+.quality-cards > * {
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+/* SOL KART - Kullanmadıklarımız */
+.quality-cards > *:first-child {
+    background: linear-gradient(145deg, #351508, #170800);
+    color: #f5dfc5;
+    border: 1px solid rgba(198, 139, 74, 0.4);
+    box-shadow: 0 12px 35px rgba(45, 16, 3, 0.22);
+}
+
+/* SOL KART görselleri */
+.quality-cards > *:first-child img {
+    object-fit: contain;
+    transition: transform 0.35s ease;
+}
+
+.quality-cards > *:first-child img:hover {
+    transform: scale(1.05);
+}
+
+/* SAĞ KART - Seçtiklerimiz */
+.quality-cards > *:last-child {
+    position: relative;
+    background: linear-gradient(145deg, #fff4e5, #f6dfc3);
+    color: #54270e;
+    border: 1px solid #e7c49b;
+    box-shadow: 0 12px 35px rgba(95, 46, 14, 0.12);
+}
+
+/* Sağ kart görselleri */
+.quality-cards > *:last-child img {
+    object-fit: contain;
+    transition: transform 0.35s ease;
+}
+
+/* Sağ karttaki çikolata görselini belirginleştir */
+.quality-cards > *:last-child img:last-of-type {
+    transform: scale(1.12);
+    transform-origin: center;
+    filter: drop-shadow(0 10px 16px rgba(83, 35, 9, 0.18));
+}
+
+/* Tik ikonları */
+.quality-cards .check,
+.quality-cards .check-icon,
+.quality-cards .quality-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    background: #71330f;
+    color: #fff8ef;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Kart içi görsellerin yerleşimi */
+.quality-cards img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .quality-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+    .quality-cards {
+        gap: 16px;
+    }
+
+    .quality-cards > * {
+        border-radius: 22px;
+    }
+
+    .quality-cards .check,
+    .quality-cards .check-icon,
+    .quality-cards .quality-check {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        font-size: 20px;
+    }
+
+    .quality-cards > *:last-child img:last-of-type {
+        transform: scale(1.05);
+    }
+}
