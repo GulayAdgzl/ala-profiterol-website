@@ -3143,3 +3143,335 @@
         transform: scale(1.05);
     }
 }
+
+
+
+/* =====================================================
+   A'LÂ - LEZZETİN SIRRI
+   REFERANS TASARIM UYARLAMASI
+   Yalnızca #icerikler kalite alanını etkiler
+===================================================== */
+
+/* Ana kalite alanı */
+#icerikler .quality-avoid-panel,
+#icerikler .quality-preferences {
+    border-radius: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* SOL KART - Kullanmadıklarımız */
+#icerikler .quality-avoid-panel {
+    background:
+        radial-gradient(circle at top right, rgba(120, 65, 25, .25), transparent 45%),
+        linear-gradient(145deg, #351508, #1b0903);
+    border: 1px solid rgba(196, 142, 84, .4);
+    color: #f8e6d0;
+    box-shadow: 0 16px 40px rgba(65, 26, 8, .18);
+    padding: 36px 28px;
+}
+
+/* Sol kart başlık */
+#icerikler .quality-panel-heading h3 {
+    color: #fff0dc;
+}
+
+#icerikler .quality-panel-heading p {
+    color: #e0c1a1;
+}
+
+/* Sol kart ikonlarının çerçevesi */
+#icerikler .quality-avoid-icon {
+    width: 82px;
+    height: 82px;
+    border: 1px solid #c79552;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #edc47e;
+    background: rgba(255, 255, 255, .025);
+    margin: 0 auto 18px;
+}
+
+/* Sol kart ikon */
+#icerikler .quality-avoid-icon svg {
+    width: 42px;
+    height: 42px;
+    stroke: currentColor;
+}
+
+/* Sol taraftaki içeriklerin dengeli yerleşimi */
+#icerikler .quality-avoid-items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    align-items: stretch;
+}
+
+#icerikler .quality-avoid-item {
+    text-align: center;
+    padding: 22px 12px;
+}
+
+/* Sol kart metinleri */
+#icerikler .quality-avoid-item h4 {
+    color: #fff0dc;
+    line-height: 1.4;
+}
+
+#icerikler .quality-avoid-item p {
+    color: #e0c1a1;
+    line-height: 1.6;
+}
+
+/* Sol kart alt mesajı */
+#icerikler .quality-panel-footnote {
+    color: #e8b76e;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   SAĞ KART - ÖZENLE SEÇTİKLERİMİZ
+===================================================== */
+
+#icerikler .quality-preferences {
+    position: relative;
+    background: linear-gradient(145deg, #fff5e8, #f6e0c5);
+    border: 1px solid #e5c49e;
+    color: #582b12;
+    padding: 32px 26px;
+    box-shadow: 0 16px 40px rgba(100, 53, 22, .10);
+}
+
+/* Sağ kart başlığı */
+#icerikler .quality-preferences-heading {
+    margin-bottom: 25px;
+}
+
+#icerikler .quality-preferences-heading h3 {
+    color: #6b3518;
+}
+
+/* Malzeme listesi + çikolata görseli */
+#icerikler .quality-preference-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(180px, .9fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 12px 16px;
+    align-items: center;
+}
+
+/* İlk 4 malzeme: sol tarafta liste görünümü */
+#icerikler .quality-preference:nth-child(-n+4) {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    min-width: 0;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Görselleri tikli yuvarlak görünümden ayır */
+#icerikler .quality-preference:nth-child(-n+4) .quality-preference-image {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    flex: 0 0 48px;
+    border-radius: 50%;
+    background: #71351b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* İlk 4 malzeme görsellerini gizle - tik kullan */
+#icerikler .quality-preference:nth-child(-n+4) .quality-preference-image img {
+    display: none;
+}
+
+/* Yuvarlak tikler */
+#icerikler .quality-preference:nth-child(-n+4) .quality-preference-image::after {
+    content: "✓";
+    color: #fff4e7;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Malzeme isimleri */
+#icerikler .quality-preference:nth-child(-n+4) h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: #613216;
+}
+
+/* İlk 4 malzemeyi sol kolonda sırala */
+#icerikler .quality-preference:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#icerikler .quality-preference:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#icerikler .quality-preference:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#icerikler .quality-preference:nth-child(4) {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+
+/* =====================================================
+   GERÇEK ÇİKOLATA - BÜYÜK VE BELİRGİN
+===================================================== */
+
+#icerikler .quality-preference:nth-child(5) {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 10px 0;
+    min-width: 0;
+}
+
+/* Çikolata görsel alanı */
+#icerikler .quality-preference:nth-child(5) .quality-preference-image {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    overflow: visible;
+}
+
+/* Çikolata görselini büyüt */
+#icerikler .quality-preference:nth-child(5) img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.2);
+    filter: drop-shadow(0 12px 16px rgba(80, 35, 12, .22));
+    transition: transform .35s ease;
+}
+
+/* Hover efekti */
+#icerikler .quality-preference:nth-child(5):hover img {
+    transform: scale(1.3);
+}
+
+/* Çikolata başlığı */
+#icerikler .quality-preference:nth-child(5) h4 {
+    position: relative;
+    z-index: 2;
+    margin: 10px 0 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #663414;
+}
+
+
+/* =====================================================
+   MOBİL UYUMLULUK
+===================================================== */
+
+@media (max-width: 900px) {
+
+    #icerikler .quality-preference-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    #icerikler .quality-preference:nth-child(1),
+    #icerikler .quality-preference:nth-child(2),
+    #icerikler .quality-preference:nth-child(3),
+    #icerikler .quality-preference:nth-child(4) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    #icerikler .quality-preference:nth-child(5) {
+        grid-column: 2;
+        grid-row: 1 / 5;
+    }
+
+    #icerikler .quality-preference:nth-child(5) .quality-preference-image {
+        height: 240px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #icerikler .quality-avoid-panel,
+    #icerikler .quality-preferences {
+        padding: 24px 18px;
+        border-radius: 22px;
+    }
+
+    #icerikler .quality-avoid-items {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    #icerikler .quality-avoid-item {
+        padding: 14px 8px;
+    }
+
+    #icerikler .quality-preference-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    #icerikler .quality-preference:nth-child(1),
+    #icerikler .quality-preference:nth-child(2),
+    #icerikler .quality-preference:nth-child(3),
+    #icerikler .quality-preference:nth-child(4),
+    #icerikler .quality-preference:nth-child(5) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    /* Mobilde çikolata görseli en altta büyük */
+    #icerikler .quality-preference:nth-child(5) {
+        padding-top: 15px;
+        margin-top: 10px;
+        border-top: 1px solid #dfbd96;
+    }
+
+    #icerikler .quality-preference:nth-child(5) .quality-preference-image {
+        height: 220px;
+    }
+
+    #icerikler .quality-preference:nth-child(5) img {
+        transform: scale(1.08);
+    }
+
+    #icerikler .quality-preference:nth-child(5):hover img {
+        transform: scale(1.12);
+    }
+}
+
