@@ -2846,14 +2846,12 @@
     }
 }
 
-
-
 /* ==========================================
-   A'LÂ - KALİTE KARTLARI GÖRSEL DÜZENLEME
-   Görseller ana proje dizinindedir.
+   QUALITY CARDS - VISUAL REFINEMENTS (LATEST)
+   Bigger ingredient cutouts, aligned checkmarks,
+   and more visible chocolate illustration.
 ========================================== */
 
-/* İki kartın dengesi */
 #icerikler .quality-cards {
     align-items: stretch;
 }
@@ -2864,170 +2862,85 @@
     min-height: 490px;
 }
 
-/* KULLANMADIKLARIMIZ - ÇİKOLATA TEMASI */
-#icerikler .quality-card-avoid {
-    background:
-        linear-gradient(
-            rgba(48, 16, 5, 0.12),
-            rgba(48, 16, 5, 0.18)
-        ),
-        url("./chocolate-panel.webp") center / cover no-repeat;
-
-    color: #fff1df;
-    border: 1px solid #b97936;
-    box-shadow: 0 18px 38px rgba(65, 25, 8, 0.20);
-}
-
-#icerikler .quality-card-avoid .quality-card-title h3,
-#icerikler .quality-card-avoid .quality-card-description,
-#icerikler .quality-card-avoid ul li,
-#icerikler .quality-card-avoid .quality-card-footer {
-    color: #fff1df;
-}
-
-#icerikler .quality-card-avoid .quality-card-kicker {
-    color: #e6b96f;
-}
-
-#icerikler .quality-card-avoid .quality-card-line {
-    background: rgba(226, 179, 104, 0.65);
-}
-
-#icerikler .quality-card-avoid .quality-card-title {
-    border-color: rgba(226, 179, 104, 0.45);
-}
-
-/* Kullanmadıklarımızın görsel ikonları */
+/* LEFT: excluded ingredients - larger illustrations */
 #icerikler .quality-card-avoid ul li > span {
-    width: 74px;
-    height: 64px;
-    min-width: 74px;
-    border: none;
-    border-radius: 0;
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    font-size: 0;
-    color: transparent;
+    width: 112px !important;
+    height: 100px !important;
+    min-width: 112px !important;
+    margin-bottom: 4px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
 }
 
-/* Tatlandırıcı */
-#icerikler .quality-card-avoid ul li:nth-child(1) > span {
-    background-image: url("./yapay_tatlandirici_glikoz_kasesi.webp");
-}
-
-/* Renklendirici */
-#icerikler .quality-card-avoid ul li:nth-child(2) > span {
-    background-image: url("./yapay_renklendirici_flask.webp");
-}
-
-/* Trans yağ ve palm yağı */
-#icerikler .quality-card-avoid ul li:nth-child(3) > span {
-    background-image: url("./trans_yag_palm_yagi.webp");
-}
-
-/* Kullanmadıklarımız kartının maddeleri */
 #icerikler .quality-card-avoid ul li {
-    align-items: center;
-    gap: 15px;
-    color: #fff0dc;
+    padding: 12px 8px !important;
+    gap: 14px !important;
 }
 
-/* KULLANDIKLARIMIZ - DAHA BELİRGİN KREM TASARIM */
-#icerikler .quality-card-good {
-    background-color: #fff2e1;
-    background-image:
-        linear-gradient(
-            rgba(255, 244, 230, 0.08),
-            rgba(255, 244, 230, 0.08)
-        );
-    border: 1px solid rgba(133, 71, 36, 0.36);
-    box-shadow: 0 18px 38px rgba(84, 44, 20, 0.12);
+/* RIGHT: checkmarks centered inside their circles */
+#icerikler .quality-card-good ul li > span {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    flex: 0 0 40px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    border-radius: 50% !important;
+    background-color: #71351b !important;
+    background-image: none !important;
+    color: #fff4e7 !important;
+    font-size: 23px !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    text-align: center !important;
 }
 
-/* Sağ kartın çikolata görseli */
+/* RIGHT: chocolate image - stronger and larger */
 #icerikler .quality-card-good::after {
-    content: "";
-    position: absolute;
-    right: -15px;
-    bottom: 5px;
-    width: 210px;
-    height: 210px;
-    background: url("./gercek_cikolata.webp") center / contain no-repeat;
-    opacity: 0.20;
-    pointer-events: none;
+    width: 270px !important;
+    height: 270px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    opacity: 0.68 !important;
+    background-size: contain !important;
+    background-position: bottom right !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
 }
 
-/* Sağ kart içeriği görselin üstünde kalır */
 #icerikler .quality-card-good > * {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
-/* Sağ kart yazı kontrastı */
-#icerikler .quality-card-good .quality-card-title h3 {
-    color: #48200f;
+#icerikler .quality-card-good ul {
+    position: relative;
+    z-index: 2;
 }
 
-#icerikler .quality-card-good .quality-card-description {
-    color: #713b20;
-}
-
-#icerikler .quality-card-good ul li {
-    color: #482b19;
-    font-weight: 500;
-}
-
-#icerikler .quality-card-good ul li small {
-    color: #795038;
-}
-
-/* Tik ikonları */
-#icerikler .quality-card-good ul li > span {
-    background: #713719;
-    border-color: #713719;
-    color: transparent;
-    font-size: 0;
-    background-image: url("./tercih_check_badge.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-/* Kartların alt mesajı */
-#icerikler .quality-card-avoid .quality-card-footer {
-    color: #e6b96f;
-}
-
-#icerikler .quality-card-good .quality-card-footer {
-    color: #864624;
-}
-
-/* MOBİL UYUMLULUK */
-@media (max-width: 760px) {
-
-    #icerikler .quality-card {
-        min-height: auto;
-        padding: 25px 20px;
-    }
-
+/* Mobile adjustments */
+@media (max-width: 600px) {
     #icerikler .quality-card-avoid ul li > span {
-        width: 60px;
-        height: 55px;
-        min-width: 60px;
+        width: 78px !important;
+        height: 72px !important;
+        min-width: 78px !important;
+        margin-bottom: 0;
     }
 
     #icerikler .quality-card-good::after {
-        width: 145px;
-        height: 145px;
-        right: -12px;
-        bottom: 0;
-        opacity: 0.14;
+        width: 175px !important;
+        height: 175px !important;
+        opacity: 0.42 !important;
     }
 
-    #icerikler .quality-card-avoid ul li {
-        gap: 12px;
+    #icerikler .quality-card-good ul li > span {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        flex-basis: 36px !important;
+        font-size: 21px !important;
     }
 }
-
