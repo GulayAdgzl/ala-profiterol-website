@@ -9,3 +9,272 @@
 .quality-signature{display:flex;align-items:center;justify-content:center;gap:clamp(12px,2vw,26px);max-width:1120px;margin:38px auto 0;color:#6c3218;text-align:center;font:italic clamp(22px,3.2vw,36px) "Playfair Display",Georgia,serif}.quality-signature span{flex:1 1 90px;height:1px;background:linear-gradient(90deg,transparent,rgba(111,57,29,.7))}.quality-signature span:last-child{transform:scaleX(-1)}
 @media(max-width:900px){.ingredients-showcase{grid-template-columns:1fr;gap:38px}.chocolate-showcase>img{max-height:300px}.ingredient-orbit{max-width:520px}.quality-panels{grid-template-columns:1fr;max-width:680px}}
 @media(max-width:600px){.ingredients{padding:58px 18px}.quality-kicker{font-size:9px;letter-spacing:.22em}.quality-intro h2{font-size:clamp(34px,10vw,46px)}.quality-intro p{font-size:15px}.ingredients-showcase{gap:30px;margin-bottom:34px}.chocolate-showcase>img{max-height:230px}.choc-tags{gap:6px}.choc-tags span{padding:8px 11px;font-size:11px}.ingredient-orbit{gap:19px 8px}.ingredient-item img{width:clamp(78px,23vw,104px)}.ingredient-item figcaption{font-size:13px}.quality-panels{gap:14px}.quality-panel{padding:22px 18px;border-radius:19px}.quality-panel-heading{justify-content:flex-start;gap:11px}.quality-symbol{flex-basis:36px;width:36px;height:36px;font-size:25px}.quality-panel-heading h3{font-size:19px}.quality-panel li{font-size:13px}.quality-signature{margin-top:30px;font-size:22px}.quality-signature span{flex-basis:20px}}
+
+
+
+/* ==============================================
+   A'LÂ - KALİTE KARTLARI REFERANS DÜZENİ
+   Gerçek HTML sınıflarına göre düzenlenmiştir.
+============================================== */
+
+/* İki kartın yerleşimi */
+#icerikler .quality-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Kartların ortak yapısı */
+#icerikler .quality-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 38px 32px;
+    backdrop-filter: none;
+}
+
+/* SOL KART - KULLANMADIKLARIMIZ */
+#icerikler .quality-panel-avoid {
+    background: linear-gradient(145deg, #4a1c08 0%, #260b02 100%);
+    color: #fff0dd;
+    border: 1px solid rgba(191, 133, 73, 0.55);
+    box-shadow: 0 15px 35px rgba(60, 22, 5, 0.22);
+}
+
+/* Sol başlık */
+#icerikler .quality-panel-avoid .quality-panel-heading {
+    border-bottom-color: rgba(225, 177, 115, 0.4);
+}
+
+/* Sol kart başlık yazısı */
+#icerikler .quality-panel-avoid .quality-panel-heading h3 {
+    color: #fff0dd;
+    font-size: clamp(21px, 2.2vw, 30px);
+}
+
+/* Sol X işareti */
+#icerikler .quality-panel-avoid .quality-symbol {
+    color: #e9bd83;
+    background: transparent;
+    border: 1px solid #c58b48;
+    width: 62px;
+    height: 62px;
+    flex-basis: 62px;
+    font-size: 34px;
+}
+
+/* Sol listedeki içerikler */
+#icerikler .quality-panel-avoid ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 16px;
+    margin-top: 28px;
+}
+
+/* Sol liste maddeleri */
+#icerikler .quality-panel-avoid li {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 18px 12px 18px 36px;
+    color: #f5dfc7;
+    border-right: 1px solid rgba(216, 164, 107, 0.28);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+/* Sol X ikonları */
+#icerikler .quality-panel-avoid li::before {
+    left: 5px;
+    top: 20px;
+    color: #e5b875;
+    background: transparent;
+    font-size: 20px;
+}
+
+/* SOL KART dekoratif çikolata ışığı */
+#icerikler .quality-panel-avoid::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -100px;
+    bottom: -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 70, 28, 0.25), transparent 70%);
+    pointer-events: none;
+}
+
+
+/* ==============================================
+   SAĞ KART - ÖZENLE SEÇTİKLERİMİZ
+============================================== */
+
+#icerikler .quality-panel-choose {
+    background: linear-gradient(145deg, #fff4e5, #f9e5ce);
+    border: 1px solid #dfbd96;
+    color: #57270e;
+    box-shadow: 0 15px 35px rgba(94, 47, 19, 0.10);
+}
+
+/* Sağ kart başlık */
+#icerikler .quality-panel-choose .quality-panel-heading {
+    border-bottom-color: rgba(158, 103, 57, 0.35);
+}
+
+/* Sağ kart başlık metni */
+#icerikler .quality-panel-choose .quality-panel-heading h3 {
+    color: #682f12;
+    font-size: clamp(21px, 2.2vw, 30px);
+}
+
+/* Sağdaki büyük tik */
+#icerikler .quality-panel-choose .quality-symbol {
+    width: 62px;
+    height: 62px;
+    flex-basis: 62px;
+    border-radius: 50%;
+    background: #713414;
+    color: #fff5e9;
+    font-size: 35px;
+}
+
+/* Sağ liste */
+#icerikler .quality-panel-choose ul {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 28px;
+    max-width: 100%;
+}
+
+/* Sağ listedeki yazılar */
+#icerikler .quality-panel-choose li {
+    padding-left: 48px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #663317;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Sağdaki yuvarlak tikler */
+#icerikler .quality-panel-choose li::before {
+    width: 36px;
+    height: 36px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    background: #753715;
+    color: #fff4e7;
+    font-size: 19px;
+    box-shadow: 0 0 0 4px rgba(117, 55, 21, 0.10);
+}
+
+/* Sağ kartın çikolata görseli dekorasyonu */
+#icerikler .quality-panel-choose::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: -20px;
+    width: 48%;
+    height: 48%;
+    background-image: url("mal-cikolata.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.95;
+    filter: drop-shadow(0 10px 12px rgba(72, 34, 12, 0.20));
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Sağ kart metinleri çikolata görselinin üstünde kalır */
+#icerikler .quality-panel-choose .quality-panel-heading,
+#icerikler .quality-panel-choose ul {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ==============================================
+   TABLET
+============================================== */
+
+@media (max-width: 900px) {
+    #icerikler .quality-panels {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    #icerikler .quality-panel {
+        padding: 25px 20px;
+    }
+
+    #icerikler .quality-panel-choose::after {
+        width: 45%;
+        height: 38%;
+    }
+}
+
+
+/* ==============================================
+   MOBİL
+============================================== */
+
+@media (max-width: 600px) {
+    #icerikler .quality-panels {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    #icerikler .quality-panel {
+        padding: 24px 18px;
+        border-radius: 22px;
+    }
+
+    #icerikler .quality-panel-heading {
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    #icerikler .quality-panel-heading h3 {
+        font-size: 20px;
+    }
+
+    #icerikler .quality-panel-avoid ul {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    #icerikler .quality-panel-avoid li {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(216, 164, 107, 0.20);
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    #icerikler .quality-panel-choose ul {
+        gap: 14px;
+        padding-right: 0;
+    }
+
+    #icerikler .quality-panel-choose li {
+        font-size: 14px;
+    }
+
+    #icerikler .quality-panel-choose::after {
+        width: 42%;
+        height: 32%;
+        right: -8px;
+        bottom: -10px;
+        opacity: 0.4;
+    }
+}
