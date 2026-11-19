@@ -3475,3 +3475,76 @@
     }
 }
 
+/* =====================================================
+   KALİTE KARTLARI – DÜZELTME (en sona ekleyin)
+===================================================== */
+
+/* 1) SOL KART: ikonları büyüt */
+#icerikler .quality-card-avoid ul li > span {
+    width: 120px !important;
+    height: 105px !important;
+    min-width: 120px !important;
+    background-size: 150% !important;   /* görsellerin kenar boşluğunu telafi eder; 130–180% arası deneyin */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* 2) SAĞ KART: tikleri tam ortalı, saf CSS ile çiz */
+#icerikler .quality-card-good ul li > span {
+    position: relative !important;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    flex: 0 0 38px !important;
+    border-radius: 50% !important;
+    border: 0 !important;
+    background-image: none !important;   /* görseldeki kayık tik kalkıyor */
+    background-color: #713719 !important;
+    box-shadow: 0 0 0 4px rgba(113, 55, 25, .1);
+    font-size: 0 !important;
+    color: transparent !important;
+}
+
+#icerikler .quality-card-good ul li > span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    width: 8px;
+    height: 15px;
+    border: solid #fff6ea;
+    border-width: 0 2.5px 2.5px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* 3) SAĞ KART: çikolata belirgin olsun */
+#icerikler .quality-card-good::after {
+    width: 290px !important;
+    height: 260px !important;
+    right: -10px !important;
+    bottom: 0 !important;
+    opacity: 1 !important;
+    mix-blend-mode: multiply;            /* görselin açık zemini kartla kaynaşır */
+    filter: drop-shadow(0 10px 14px rgba(80, 35, 12, .22));
+    z-index: 0 !important;
+}
+
+#icerikler .quality-card-good ul {
+    max-width: 62%;                      /* yazılar çikolatanın üstüne binmesin */
+}
+
+@media (max-width: 760px) {
+    #icerikler .quality-card-avoid ul li > span {
+        width: 80px !important;
+        height: 72px !important;
+        min-width: 80px !important;
+    }
+    #icerikler .quality-card-good::after {
+        width: 190px !important;
+        height: 170px !important;
+        opacity: .95 !important;
+    }
+    #icerikler .quality-card-good ul {
+        max-width: 100%;
+    }
+}
