@@ -3586,3 +3586,38 @@
         min-width: 68px !important;
     }
 }
+
+
+
+/* ==========================================
+   HERO PROFİTEROL GÖRSELİ - BOYUT DÜZENLEMESİ
+   ========================================== */
+
+.sh-stage .sh-canvas {
+    width: min(88vw, 1100px) !important;
+    height: auto !important;
+    max-height: 88svh;
+    aspect-ratio: 16 / 9;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    inset: auto;
+
+    transform: translate(-50%, -50%);
+}
+
+/* Büyük ekranlarda görselin aşırı büyümesini önle */
+@media (min-width: 1400px) {
+    .sh-stage .sh-canvas {
+        width: min(82vw, 1100px) !important;
+    }
+}
+
+/* Mobil görünüm */
+@media (max-width: 650px) {
+    .sh-stage .sh-canvas {
+        width: 100vw !important;
+        max-height: 65svh;
+    }
+}
