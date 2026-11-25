@@ -3586,3 +3586,40 @@
         min-width: 68px !important;
     }
 }
+
+
+/* =========================================================
+   HERO – MP4 VİDEO (sprite/canvas sisteminin yerine)
+   style.css dosyasının EN SONUNA ekleyin.
+   Eski ".sh-canvas { ... }" satırı artık kullanılmıyor, silebilirsiniz.
+   ========================================================= */
+
+/* Masaüstü / yatay ekran: tüm sahneyi kaplar, oran korunur, profiterol merkezde */
+.sh-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  background: #1e0a05;          /* video yüklenene kadar koyu zemin */
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Dikey ekran (eski canvas mantığıyla aynı: aspect < 1/1.1):
+   video ekran genişliğinin %170'i kadar, dikey olarak %40 hizasında,
+   üst/alt kenarlar zeminle eriyerek yazıyla bütünleşir */
+@media (max-aspect-ratio: 10/11) {
+  .sh-video {
+    inset: auto;
+    left: 50%; top: 40%;
+    width: 170%; height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 34%, #000 66%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0, #000 34%, #000 66%, transparent 100%);
+  }
+}
+
+/* Video yüklenemezse mevcut yedek arka plan (profiterol-cikolata.webp) devreye girer */
+.sh-stage.no-sprite .sh-video { display: none; }
