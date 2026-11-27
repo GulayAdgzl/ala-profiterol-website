@@ -3808,9 +3808,6 @@
 
 
 
-
-
-
 /* =========================================================
    GALERİ – yeni tasarım
    style.css dosyasının EN SONUNA ekleyin.
@@ -3826,16 +3823,6 @@
     radial-gradient(ellipse at 50% 30%, #fdecd3 0%, transparent 65%),
     linear-gradient(180deg, #fae3c6 0%, #f9e0c1 100%);
 }
-
-/* Çikolata süsleri */
-.galeri-dekor {
-  position: absolute; z-index: 0; display: block; height: auto;
-  pointer-events: none; user-select: none;
-}
-.galeri-dekor-sol-ust { top: 0; left: 0;  width: clamp(140px, 19.7vw, 330px); }
-.galeri-dekor-sag-ust { top: 0; right: 0; width: clamp(110px, 18vw, 302px); }
-.galeri-dekor-sol-alt { bottom: 0; left: 0;  width: clamp(100px, 16vw, 270px); }
-.galeri-dekor-sag-alt { bottom: 0; right: 0; width: clamp(180px, 29vw, 492px); }
 
 .galeri-inner { position: relative; z-index: 1; max-width: 1540px; margin: 0 auto; }
 
@@ -3932,11 +3919,7 @@
 }
 
 @media (max-width: 650px) {
-  #galeri { padding-top: 100px; }
-  .galeri-dekor-sol-ust { width: 34vw; }
-  .galeri-dekor-sag-ust { width: 30vw; }
-  .galeri-dekor-sol-alt { width: 24vw; }
-  .galeri-dekor-sag-alt { width: 40vw; }
+  #galeri { padding-top: 80px; }
   .galeri-eyebrow { gap: 10px; letter-spacing: .18em; font-size: 10.5px; }
   .galeri-item figcaption { font-size: 15px; padding-bottom: 6px; }
 }
