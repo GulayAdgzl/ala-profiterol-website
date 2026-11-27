@@ -3928,3 +3928,148 @@
   .galeri-item, .galeri-item img { transition: none; }
   .galeri-item:hover, .galeri-item:hover img { transform: none; }
 }
+/* =========================================================
+   PROFİTEROL ÇEŞİTLERİ – yeni tasarım
+   style.css dosyasının EN SONUNA ekleyin.
+   Yalnızca #cesitler bölümünü etkiler.
+   ========================================================= */
+
+#cesitler {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: clamp(70px, 8vw, 110px) clamp(16px, 3.5vw, 56px) clamp(60px, 7vw, 90px);
+  background:
+    radial-gradient(ellipse at 50% 38%, #fbdcbc 0%, transparent 62%),
+    linear-gradient(180deg, #f7d4ae 0%, #f6d2ab 100%);
+}
+
+.cesit-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Başlık */
+.cesit-heading { text-align: center; margin-bottom: clamp(30px, 4vw, 52px); }
+
+.cesit-eyebrow {
+  display: flex; align-items: center; justify-content: center; gap: 18px;
+  margin: 0;
+  color: #7a3a17;
+  font: 600 clamp(11px, 1.15vw, 15px) "DM Sans", sans-serif;
+  letter-spacing: .24em;
+}
+.cesit-eyebrow span { flex: 0 1 clamp(30px, 12vw, 185px); height: 1px; background: #8d5a3b; }
+
+.cesit-heading h2 {
+  margin: clamp(10px, 1.4vw, 18px) 0 0;
+  color: #3a180c;
+  font: 700 clamp(36px, 5.6vw, 76px)/1.08 "Playfair Display", serif;
+  letter-spacing: -.01em;
+}
+.cesit-heading h2 em { color: #b5581a; font-style: normal; }
+
+.cesit-script {
+  margin: clamp(2px, .6vw, 8px) 0 0;
+  color: #4a2412;
+  font: 400 clamp(26px, 3.6vw, 48px)/1.2 "Great Vibes", cursive;
+}
+
+.cesit-heart {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  margin-top: clamp(10px, 1.6vw, 20px);
+  color: #b5581a; font-size: 20px; line-height: 1;
+}
+.cesit-heart span { width: clamp(50px, 9vw, 150px); height: 1px; background: #8d5a3b; }
+
+/* Kartlar */
+.cesit-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(10px, 1.3vw, 18px);
+}
+
+.cesit-card {
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  border-radius: clamp(70px, 8.5vw, 112px) clamp(70px, 8.5vw, 112px) 26px 26px;
+  background: #fdeedd;
+  box-shadow: 0 16px 34px rgba(96, 44, 16, .18);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.cesit-card:hover { transform: translateY(-7px); box-shadow: 0 24px 44px rgba(96, 44, 16, .26); }
+
+.cesit-photo { aspect-ratio: 1 / 1; overflow: hidden; background: #3a180c; }
+.cesit-photo img {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 50% 58%;
+  transition: transform .6s ease;
+}
+.cesit-card:hover .cesit-photo img { transform: scale(1.05); }
+
+/* Fotoğrafın altına binen kavisli krem panel */
+.cesit-body {
+  position: relative;
+  flex: 1;
+  margin-top: -22px;
+  padding: 34px 16px 34px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff3e4, #fbe6d0);
+  border-radius: 50% 50% 0 0 / 34px 34px 0 0;
+}
+.cesit-body::after {
+  content: ""; position: absolute; left: 50%; bottom: 16px;
+  width: 78px; height: 1px; transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, #b5702f, transparent);
+}
+.cesit-body h3 {
+  margin: 0 0 8px;
+  color: #3a180c;
+  font: 700 clamp(17px, 1.65vw, 23px)/1.25 "Playfair Display", serif;
+}
+.cesit-body p {
+  margin: 0 auto;
+  max-width: 220px;
+  color: #4d3022;
+  font: 400 clamp(13px, 1.15vw, 15.5px)/1.5 "DM Sans", sans-serif;
+}
+
+/* Menü notu (mevcut içerik korunuyor) */
+#cesitler .menu-note { margin-top: clamp(28px, 4vw, 44px); }
+#cesitler .menu-note p { color: #6b4630; }
+
+/* Tablet + mobil: yatay kaydırmalı kartlar */
+@media (max-width: 900px) {
+  .cesit-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 14px;
+    padding: 6px 20px 22px;
+    margin: 0 -16px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .cesit-grid::-webkit-scrollbar { display: none; }
+  .cesit-card {
+    flex: 0 0 min(66vw, 300px);
+    scroll-snap-align: center;
+    border-radius: 100px 100px 24px 24px;
+  }
+  .cesit-card:hover { transform: none; }
+}
+
+@media (max-width: 650px) {
+  #cesitler { padding-top: 80px; }
+  .cesit-card { flex-basis: 74vw; }
+  .cesit-eyebrow { gap: 10px; letter-spacing: .16em; font-size: 10.5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cesit-card, .cesit-photo img { transition: none; }
+  .cesit-card:hover, .cesit-card:hover .cesit-photo img { transform: none; }
+}
